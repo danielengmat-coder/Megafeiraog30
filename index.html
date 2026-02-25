@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; scroll-behavior: smooth; }
         .script-card { transition: all 0.3s ease; }
         .teleprompter-text { font-size: 2rem; line-height: 1.4; color: white; background: black; padding: 2rem; border-radius: 8px; }
         /* Scrollbar hiding for clean UI */
@@ -16,17 +16,10 @@
     </style>
     <!-- Chosen Palette: Modern Automotive Retail - Warm Neutrals (Slate/Gray) with Urgent Orange Accents -->
     <!-- Application Structure Plan: 
-         1. Strategy Dashboard: Visual breakdown of the script inventory (Types & Triggers) to help managers balance the campaign content.
-         2. The Formula: Educational section reinforcing the Hook-Presentation-CTA structure.
-         3. Script Hub: The core interactive area. A grid of cars filterable by category.
-         4. Studio View: When a car is selected, this pane allows toggling hooks and viewing the final composition + filming tips.
-         5. Teleprompter: A functional tool for the actual recording moment.
-    -->
-    <!-- Visualization & Content Choices:
-         - Doughnut Chart: To show the distribution of 'Standard' vs 'Scarcity' scripts, helping the user understand the emotional mix of the campaign.
-         - Bar Chart: To show vehicle body types (SUV, Hatch, Sedan) coverage.
-         - Interactive List: Filterable grid for quick access to specific models.
-         - Dynamic Text Block: The "Script Builder" assembles text fragments (Hook + Body + CTA) in real-time based on user selection.
+         1. The Formula: Educational section reinforcing the Hook-Presentation-CTA structure.
+         2. Strategy & Funnel: Calendar for the Live event and Paid Traffic structure (Top, Mid, Bottom funnel).
+         3. Script Hub: The core interactive area. A list of cars with their scripts.
+         4. Teleprompter: A functional tool for the actual recording moment.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
@@ -41,6 +34,7 @@
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#formula" class="text-slate-500 hover:text-slate-900 px-3 py-2 text-sm font-medium">A Fórmula</a>
+                <a href="#estrategia" class="text-slate-500 hover:text-slate-900 px-3 py-2 text-sm font-medium">Calendário & Funil</a>
                 <a href="#informativo" class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition">Ver Todos os Roteiros</a>
             </nav>
         </div>
@@ -57,7 +51,7 @@
         </section>
 
         <!-- The Formula Section -->
-        <section id="formula" class="bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg">
+        <section id="formula" class="bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg pt-24 -mt-24"> <!-- Offset for sticky header -->
             <div class="p-8 md:p-12 text-center">
                 <h3 class="text-2xl font-bold mb-6">A Fórmula de Alta Conversão</h3>
                 <p class="text-slate-300 mb-10 max-w-2xl mx-auto">Todo vídeo neste feirão segue uma estrutura psicológica desenhada para prender a atenção e gerar ação imediata.</p>
@@ -93,11 +87,74 @@
             </div>
         </section>
 
+        <!-- Estratégia, Calendário e Funis -->
+        <section id="estrategia" class="space-y-8 pt-24 -mt-24">
+            <div class="border-b border-slate-200 pb-4 mb-6">
+                <h3 class="text-3xl font-bold text-slate-900">Calendário e Funil de Vendas</h3>
+                <p class="text-slate-500 mt-2 text-lg">Cronograma oficial e a base da nossa estratégia de distribuição de conteúdo (Tráfego Pago).</p>
+            </div>
+
+            <!-- Live Card -->
+            <div class="bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl p-8 text-white shadow-lg flex flex-col md:flex-row items-center justify-between">
+                <div>
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30">Evento Oficial</span>
+                    <h4 class="text-3xl font-bold mt-4 mb-2">Live de Abertura</h4>
+                    <p class="text-orange-50 max-w-md">O grande pontapé inicial do 1º Mega Feirão G30. Prepare sua equipe de plantão para receber os leads em tempo real!</p>
+                </div>
+                <div class="mt-6 md:mt-0 bg-white text-orange-600 p-6 rounded-xl text-center min-w-[220px] shadow-xl transform md:scale-110">
+                    <div class="text-5xl font-black tracking-tight">25/03</div>
+                    <div class="text-xl font-bold uppercase tracking-widest text-orange-800">2026</div>
+                    <div class="mt-3 bg-orange-50 text-orange-700 font-bold py-1.5 px-3 rounded text-sm">
+                        ⏰ Início às 19:30
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tráfego Pago Grid -->
+            <div class="mt-8">
+                <h4 class="text-xl font-bold text-slate-800 mb-4">Estrutura de Tráfego Pago (Conteúdos Base)</h4>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Conteúdo 1: Institucional -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-blue-500 hover:shadow-md transition">
+                        <div class="bg-blue-100 text-blue-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Topo de Funil</div>
+                        <h5 class="text-xl font-bold text-slate-900 mb-2">1. Vídeo Institucional</h5>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Vídeo de alto valor focando na autoridade do G30. Roda continuamente para atrair público novo para a base.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
+                            <strong>🎬 Script Autoridade:</strong><br><br>
+                            <span class="italic">"(Andando pelo pátio e falando) Nada melhor do que colocar a cabeça no travesseiro tendo a certeza que fez um bom negócio. Muitos procuram por um carro, poucos recorrem a uma oportunidade única com qualidade. Afinal... é por isso que o Mega Feirão da G30, unindo 100 lojas em todo o Brasil, te apresenta a chance do ano."</span>
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo 2: Prova Social -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-purple-500 hover:shadow-md transition">
+                        <div class="bg-purple-100 text-purple-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Meio de Funil</div>
+                        <h5 class="text-xl font-bold text-slate-900 mb-2">2. Prova Social</h5>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Depoimentos reais e entregas de chaves. Gera confiança instantânea e quebra as principais objeções do cliente.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
+                            <strong>🎯 Foco da Campanha:</strong><br><br>
+                            Apresentar para o público que já assistiu ao vídeo institucional. Mostre o cliente feliz saindo da loja com o carro. A mensagem é: "Pessoas reais estão aproveitando o feirão, você vai ficar de fora?".
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo 3: Vendas / Urgência -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-red-500 hover:shadow-md transition">
+                        <div class="bg-red-100 text-red-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Fundo de Funil</div>
+                        <h5 class="text-xl font-bold text-slate-900 mb-2">3. Oferta Única (Vendas)</h5>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Os roteiros práticos! Gatilhos de escassez e urgência para conversão imediata de quem já conhece a marca.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
+                            <strong>⚡ Gatilho Mental & Ação:</strong><br><br>
+                            Direcionar o tráfego de Remarketing diretamente para o WhatsApp do seu time. Use os scripts da categoria <strong>🔥 Urgência & Escassez</strong> abaixo ("Última unidade", "Só hoje", "Amanhã pode ser tarde").
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Informativo Section (All Scripts) -->
-        <section id="informativo" class="space-y-8">
+        <section id="informativo" class="space-y-8 pt-24 -mt-24">
             <div class="border-b border-slate-200 pb-4 mb-6">
                 <h3 class="text-3xl font-bold text-slate-900">Roteiros Disponíveis</h3>
-                <p class="text-slate-500 mt-2 text-lg">Consulte abaixo todos os roteiros organizados. Escolha o modelo, revise a melhor opção de gancho e abra o teleprompter para facilitar a sua gravação.</p>
+                <p class="text-slate-500 mt-2 text-lg">Consulte abaixo todos os roteiros organizados para o <strong>Fundo de Funil</strong>. Escolha o modelo, revise a melhor opção de gancho e abra o teleprompter para facilitar a sua gravação.</p>
             </div>
             
             <div id="allScriptsContainer" class="space-y-8">
