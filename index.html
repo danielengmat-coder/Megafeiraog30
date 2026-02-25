@@ -45,7 +45,7 @@
                 <button onclick="switchTab('main')" id="nav-feirao" class="nav-btn text-orange-500 px-3 py-2 text-sm font-bold uppercase tracking-wider transition">O Feirão</button>
                 <div class="w-px h-4 bg-[#1a382a] mx-2"></div>
                 
-                <!-- Tab 3: Tráfego Pago (NEW) -->
+                <!-- Tab 3: Tráfego Pago -->
                 <button onclick="switchTab('trafego')" id="nav-trafego" class="nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2">
                     <span>🚀 Tráfego & Calendário</span>
                 </button>
@@ -283,7 +283,7 @@
 
 
         <!-- ========================================== -->
-        <!-- TAB 3: TRÁFEGO PAGO E CALENDÁRIO (NEW)     -->
+        <!-- TAB 3: TRÁFEGO PAGO E CALENDÁRIO           -->
         <!-- ========================================== -->
         <div id="tab-trafego" class="tab-content space-y-20">
             
@@ -296,70 +296,114 @@
                 </p>
             </section>
 
-            <!-- Calendário Timeline -->
-            <section class="max-w-5xl mx-auto">
+            <!-- NOVO: Calendário Timeline (Tabela Estruturada) -->
+            <section class="max-w-6xl mx-auto">
                 <div class="bg-[#050b08] border border-[#1a382a] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                     <div class="absolute -top-24 -left-24 w-64 h-64 bg-orange-600/10 blur-[80px] rounded-full pointer-events-none"></div>
                     
                     <div class="text-center mb-12 relative z-10">
-                        <span class="bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-4 shadow-lg">Cronograma Ideal</span>
+                        <span class="bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-4 shadow-lg">Planejamento Estratégico</span>
                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter">O Caminho até o <span class="text-orange-500">Desafio</span></h3>
+                        <p class="text-slate-400 mt-3 text-sm md:text-base max-w-2xl mx-auto">Mapeamento exato das campanhas desde o aquecimento até aos dias do evento, englobando as fases vitais para alta conversão.</p>
                     </div>
 
-                    <div class="space-y-6 relative z-10">
-                        <!-- Fase 1 -->
-                        <div class="bg-[#0a1812] border border-[#1a382a] rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start md:items-center hover:border-orange-500/50 transition">
-                            <div class="bg-[#133325] text-orange-400 font-black text-center py-4 px-6 rounded-xl border border-[#1a382a] min-w-[160px] shrink-0">
-                                <div class="text-xs uppercase tracking-widest mb-1 text-slate-400">Fase 1</div>
-                                <div class="text-xl leading-none">10/03 a 24/03</div>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold text-white mb-2">Captação & Engajamento</h4>
-                                <p class="text-slate-400 mb-3">Encher a Central de Leads e a lista do Carchat. Este é o momento de encontrar o público que quer comprar carro este mês.</p>
-                                <div class="flex gap-2 flex-wrap">
-                                    <span class="bg-blue-900/30 text-blue-400 text-xs px-2 py-1 rounded font-bold border border-blue-800/50">🎬 Vídeo Institucional</span>
-                                    <span class="bg-purple-900/30 text-purple-400 text-xs px-2 py-1 rounded font-bold border border-purple-800/50">⭐ Prova Social</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="relative z-10 overflow-x-auto rounded-2xl border border-[#1a382a] shadow-xl">
+                        <table class="w-full text-left border-collapse min-w-[800px]">
+                            <thead class="bg-[#133325] text-orange-400 uppercase text-xs tracking-widest font-black border-b-2 border-orange-500/50">
+                                <tr>
+                                    <th class="px-6 py-5 w-1/5">Período / Data</th>
+                                    <th class="px-6 py-5 w-1/5">Fase do Feirão</th>
+                                    <th class="px-6 py-5 w-1/4">Conteúdo / Ação</th>
+                                    <th class="px-6 py-5 w-auto">Detalhes & Estratégia (Gravação)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-[#1a382a] text-sm text-slate-300">
+                                
+                                <!-- Fase 1: Aquecimento -->
+                                <tr class="hover:bg-[#0a1812] transition duration-200">
+                                    <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
+                                        <div class="text-xl">10 a 19/Mar</div>
+                                        <div class="text-xs text-slate-500 uppercase mt-1">Semanas Antes</div>
+                                    </td>
+                                    <td class="px-6 py-6">
+                                        <span class="bg-blue-900/30 text-blue-400 text-xs px-3 py-1 rounded font-black uppercase tracking-wider border border-blue-800/50 block w-max">Aquecimento</span>
+                                    </td>
+                                    <td class="px-6 py-6 font-bold text-white">
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li>Vídeo Institucional do Feirão</li>
+                                            <li>Prova Social (Semana Anterior)</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-6 leading-relaxed">
+                                        Vídeos institucionais mostrando que <strong class="text-white">"a sua programação de final de semana está garantida"</strong> e que chegou a <strong class="text-white">"sua data marcada para comprar o carro novo"</strong>. Objetivo: criar o desejo de separar a semana para isso.
+                                    </td>
+                                </tr>
 
-                        <!-- Fase 2 -->
-                        <div class="bg-[#0a1812] border border-orange-500/50 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start md:items-center transform md:scale-105 shadow-[0_0_20px_rgba(234,88,12,0.15)] z-20">
-                            <div class="bg-gradient-to-br from-orange-600 to-orange-800 text-white font-black text-center py-4 px-6 rounded-xl border border-orange-500/50 min-w-[160px] shrink-0 shadow-lg">
-                                <div class="text-xs uppercase tracking-widest mb-1 text-orange-200">Fase 2</div>
-                                <div class="text-xl leading-none">24 e 25/03</div>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold text-white mb-2">Antecipação da Live</h4>
-                                <p class="text-orange-100 mb-3">Impactar TODA a base captada na Fase 1 com lembretes para o evento de abertura. Objetivo: Máximo de pessoas simultâneas.</p>
-                                <div class="flex gap-2 flex-wrap">
-                                    <span class="bg-orange-500/20 text-orange-300 text-xs px-2 py-1 rounded font-bold border border-orange-500/30">⏳ Faltam 2 Dias</span>
-                                    <span class="bg-orange-500/20 text-orange-300 text-xs px-2 py-1 rounded font-bold border border-orange-500/30">🔴 É HOJE às 19h30</span>
-                                </div>
-                            </div>
-                        </div>
+                                <!-- Fase 2: Agenda / Pré-Live -->
+                                <tr class="hover:bg-[#0a1812] transition duration-200">
+                                    <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
+                                        <div class="text-xl">20 a 24/Mar</div>
+                                        <div class="text-xs text-slate-500 uppercase mt-1">Antecipação</div>
+                                    </td>
+                                    <td class="px-6 py-6">
+                                        <span class="bg-purple-900/30 text-purple-400 text-xs px-3 py-1 rounded font-black uppercase tracking-wider border border-purple-800/50 block w-max">Agenda (Público)</span>
+                                    </td>
+                                    <td class="px-6 py-6 font-bold text-white">
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li>Oportunidade Única anunciada antes</li>
+                                            <li>Convites para a Live</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-6 leading-relaxed">
+                                        Aviso massivo: <strong class="text-white">"Separe a semana antes para isso!"</strong>. Focar na emoção e na oportunidade apelativa, convidando todos para a live de abertura que trará as ofertas oficiais.
+                                    </td>
+                                </tr>
 
-                        <!-- Fase 3 -->
-                        <div class="bg-[#0a1812] border border-[#1a382a] rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start md:items-center hover:border-red-500/50 transition">
-                            <div class="bg-[#3b0a0a] text-red-400 font-black text-center py-4 px-6 rounded-xl border border-red-900/50 min-w-[160px] shrink-0">
-                                <div class="text-xs uppercase tracking-widest mb-1 text-red-300/60">Fase 3</div>
-                                <div class="text-xl leading-none">26, 27 e 28/03</div>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold text-white mb-2">O Desafio (Sprint de Vendas)</h4>
-                                <p class="text-slate-400 mb-3">Conversão Pura. Anúncios agressivos focados na exclusividade e na urgência (condição C6 Auto encerra dia 28).</p>
-                                <div class="flex gap-2 flex-wrap">
-                                    <span class="bg-red-900/30 text-red-400 text-xs px-2 py-1 rounded font-bold border border-red-800/50">🔥 Urgência (Roteiros)</span>
-                                    <span class="bg-red-900/30 text-red-400 text-xs px-2 py-1 rounded font-bold border border-red-800/50">🚨 Últimas Unidades</span>
-                                </div>
-                            </div>
-                        </div>
+                                <!-- Fase 3: Abertura (Esquenta) -->
+                                <tr class="hover:bg-[#0a1812] transition duration-200 bg-[#133325]/40">
+                                    <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
+                                        <div class="text-2xl text-orange-500">25/Março</div>
+                                        <div class="text-xs text-orange-400 uppercase mt-1 font-black">Quarta-feira (19h30)</div>
+                                    </td>
+                                    <td class="px-6 py-6">
+                                        <span class="bg-orange-500/20 text-orange-400 text-xs px-3 py-1 rounded font-black uppercase tracking-wider border border-orange-500/50 block w-max shadow-[0_0_10px_rgba(234,88,12,0.3)]">Esquenta</span>
+                                    </td>
+                                    <td class="px-6 py-6 font-bold text-orange-100">
+                                        Live de Super Ofertas <br/>"Esquenta do Feirão"
+                                    </td>
+                                    <td class="px-6 py-6 leading-relaxed text-orange-50">
+                                        A grande abertura. Engajamento máximo com a base que já foi aquecida e início da recolha de leads "Quentes" através do funil do Carchat + IA.
+                                    </td>
+                                </tr>
+
+                                <!-- Fase 4: Realização -->
+                                <tr class="hover:bg-[#0a1812] transition duration-200 border-l-4 border-red-500">
+                                    <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
+                                        <div class="text-2xl text-red-500">26 a 28/Mar</div>
+                                        <div class="text-xs text-red-400 uppercase mt-1 font-black">Sprint Final</div>
+                                    </td>
+                                    <td class="px-6 py-6">
+                                        <span class="bg-red-900/30 text-red-400 text-xs px-3 py-1 rounded font-black uppercase tracking-wider border border-red-800/50 block w-max">Realização do Feirão</span>
+                                    </td>
+                                    <td class="px-6 py-6 font-bold text-white">
+                                        <ul class="list-disc pl-4 space-y-1">
+                                            <li>Vídeos gravados anteriormente</li>
+                                            <li>Vídeos do dia a dia (Tempo Real)</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-6 py-6 leading-relaxed">
+                                        Soltar as chamadas específicas (qualidades e perfis). Usar vídeos prontos que mencionem <strong class="text-white">"hoje", "agora", "no momento"</strong>. Gravar muito conteúdo "cru" mostrando a estrutura, o movimento e <strong class="text-white">prova social real</strong> (chaves entregues).
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
 
             <!-- Distribuição de Verba e Setup -->
-            <section class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 pb-12">
+            <section class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 pb-12 mt-12">
                 
                 <!-- Verba -->
                 <div class="bg-[#0a1812] border border-[#1a382a] rounded-3xl p-8 relative overflow-hidden shadow-lg">
@@ -368,7 +412,7 @@
                     <div class="space-y-5">
                         <div>
                             <div class="flex justify-between text-sm font-bold text-slate-300 mb-1">
-                                <span>Captação (Fase 1)</span>
+                                <span>Captação (Aquecimento e Agenda)</span>
                                 <span>60%</span>
                             </div>
                             <div class="w-full bg-[#050b08] rounded-full h-3 border border-[#1a382a]">
@@ -379,7 +423,7 @@
 
                         <div>
                             <div class="flex justify-between text-sm font-bold text-slate-300 mb-1">
-                                <span>Aquecimento Live (Fase 2)</span>
+                                <span>Esquenta Live (Abertura)</span>
                                 <span>10%</span>
                             </div>
                             <div class="w-full bg-[#050b08] rounded-full h-3 border border-[#1a382a]">
@@ -390,7 +434,7 @@
 
                         <div>
                             <div class="flex justify-between text-sm font-bold text-slate-300 mb-1">
-                                <span>Sprint Final / Remarketing (Fase 3)</span>
+                                <span>Sprint Final / Remarketing (Realização)</span>
                                 <span>30%</span>
                             </div>
                             <div class="w-full bg-[#050b08] rounded-full h-3 border border-[#1a382a]">
@@ -471,7 +515,6 @@
 
         // --- DOM ELEMENTS & INIT ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Check if scriptsData exists from previous script blocks (relying on main document logic)
             if(typeof renderAllScripts === 'function') {
                 renderAllScripts();
             }
@@ -517,7 +560,7 @@
                 document.getElementById('nav-prevendas').classList.replace('border-[#1a382a]', 'border-orange-500');
             }
 
-            // Mobile Buttons Reset (Simplified)
+            // Mobile Buttons Reset
             const mobileBtns = document.querySelectorAll('.xl\\:hidden button');
             mobileBtns.forEach(btn => {
                 btn.className = "bg-[#133325] text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase border border-[#1a382a] shrink-0";
@@ -587,7 +630,7 @@
                 if (isLargeBtn) {
                     btn.classList.add('bg-green-600', 'border-green-500');
                     btn.classList.remove('bg-[#1a382a]', 'hover:bg-orange-600', 'border-[#234d3a]', 'hover:border-orange-500');
-                    btn.querySelector('.btn-icon').style.display = 'none';
+                    if (btn.querySelector('.btn-icon')) btn.querySelector('.btn-icon').style.display = 'none';
                 } else {
                     btn.classList.add('bg-green-600', 'text-white', 'border-green-500');
                     btn.classList.remove('bg-[#133325]', 'hover:bg-orange-600', 'text-orange-400', 'hover:text-white', 'border-[#1a382a]', 'hover:border-orange-500');
@@ -598,7 +641,7 @@
                     if (isLargeBtn) {
                         btn.classList.remove('bg-green-600', 'border-green-500');
                         btn.classList.add('bg-[#1a382a]', 'hover:bg-orange-600', 'border-[#234d3a]', 'hover:border-orange-500');
-                        btn.querySelector('.btn-icon').style.display = 'inline-block';
+                        if (btn.querySelector('.btn-icon')) btn.querySelector('.btn-icon').style.display = 'inline-block';
                     } else {
                         btn.classList.remove('bg-green-600', 'text-white', 'border-green-500');
                         btn.classList.add('bg-[#133325]', 'hover:bg-orange-600', 'text-orange-400', 'hover:text-white', 'border-[#1a382a]', 'hover:border-orange-500');
