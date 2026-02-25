@@ -5,82 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G30 Script Studio | Mega Feirão</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;0,900;1,800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: radial-gradient(circle at 50% 20%, #133325 0%, #050b08 100%); 
+            background-attachment: fixed;
+            scroll-behavior: smooth; 
+            color: #f8fafc;
+            min-height: 100vh;
+        }
         .script-card { transition: all 0.3s ease; }
         .teleprompter-text { font-size: 2rem; line-height: 1.4; color: white; background: black; padding: 2rem; border-radius: 8px; }
         /* Scrollbar hiding for clean UI */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
-    <!-- Chosen Palette: Modern Automotive Retail - Warm Neutrals (Slate/Gray) with Urgent Orange Accents -->
-    <!-- Application Structure Plan: 
-         1. The Formula: Educational section reinforcing the Hook-Presentation-CTA structure.
-         2. Strategy & Funnel: Calendar for the Live event and Paid Traffic structure (Top, Mid, Bottom funnel).
-         3. Script Hub: The core interactive area. A list of cars with their scripts.
-         4. Teleprompter: A functional tool for the actual recording moment.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- Chosen Palette: Deep Dark Emerald/Black (#050b08), White, and Vibrant Orange (#f97316) -->
 </head>
-<body class="text-slate-800">
+<body class="text-slate-100 antialiased">
 
     <!-- Navigation / Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <img src="https://raw.githubusercontent.com/G30IA/g30-summit-dashboard/44186b90d876cbf1a86191c78bf3ff02c34299cd/G30logonova" alt="G30 Logo" class="h-8 w-auto object-contain" onerror="this.outerHTML='<div class=&quot;w-8 h-8 bg-orange-500 rounded flex items-center justify-center text-white font-bold&quot;>G30</div>'">
-                <h1 class="text-xl font-bold tracking-tight text-slate-900">Mega Feirão <span class="text-orange-500">Studio</span></h1>
+    <header class="bg-[#050b08]/90 backdrop-blur shadow-lg sticky top-0 z-50 border-b border-[#1a382a]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="https://raw.githubusercontent.com/G30IA/g30-summit-dashboard/44186b90d876cbf1a86191c78bf3ff02c34299cd/G30logonova" alt="G30 Logo" class="h-10 w-auto object-contain" onerror="this.outerHTML='<div class=&quot;w-10 h-10 bg-orange-500 rounded flex items-center justify-center text-white font-black italic&quot;>G30</div>'">
+                <div class="flex flex-col justify-center">
+                    <span class="text-[10px] text-slate-400 uppercase tracking-[0.2em] mb-0.5">C6 Auto Apresenta:</span>
+                    <h1 class="text-xl md:text-2xl font-black tracking-tight text-white uppercase italic leading-none">Mega Feirão <span class="text-orange-500">G30</span></h1>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#formula" class="text-slate-500 hover:text-slate-900 px-3 py-2 text-sm font-medium">A Fórmula</a>
-                <a href="#estrategia" class="text-slate-500 hover:text-slate-900 px-3 py-2 text-sm font-medium">Calendário & Funil</a>
-                <a href="#informativo" class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition">Ver Todos os Roteiros</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#formula" class="text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition">A Fórmula</a>
+                <a href="#estrategia" class="text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition">Calendário & Funil</a>
+                <a href="#informativo" class="bg-orange-600 text-white px-5 py-2.5 rounded-md text-sm font-bold uppercase tracking-wide hover:bg-orange-500 transition shadow-[0_0_15px_rgba(234,88,12,0.4)]">Ver Roteiros</a>
             </nav>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
         <!-- Intro Section -->
-        <section class="text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Prepare sua Equipe para o Recorde de Vendas</h2>
-            <p class="mt-4 text-lg text-slate-600">
-                Bem-vindo ao hub oficial de roteiros do 1º Mega Feirão G30. Aqui você encontra estratégias de vídeo validadas para gerar tráfego e vendas, organizadas para uso imediato.
+        <section class="text-center max-w-4xl mx-auto py-6">
+            <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter drop-shadow-lg leading-tight">
+                Um feirão para fazer <br/>história no <span class="text-orange-500">BRASIL!</span>
+            </h2>
+            <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
+                O hub oficial de roteiros do 1º Mega Feirão G30. Aceda às estratégias validadas para gerar tráfego e vendas no seu stand.
             </p>
         </section>
 
-        <!-- The Formula Section -->
-        <section id="formula" class="bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg pt-24 -mt-24"> <!-- Offset for sticky header -->
-            <div class="p-8 md:p-12 text-center">
-                <h3 class="text-2xl font-bold mb-6">A Fórmula de Alta Conversão</h3>
-                <p class="text-slate-300 mb-10 max-w-2xl mx-auto">Todo vídeo neste feirão segue uma estrutura psicológica desenhada para prender a atenção e gerar ação imediata.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-                    <div class="bg-slate-800 p-6 rounded-lg border-t-4 border-yellow-400">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-yellow-400 font-bold text-xl">01</span>
-                            <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-slate-300">Max 5s</span>
+        <!-- O Desafio Section (NEW) -->
+        <section class="max-w-4xl mx-auto -mt-6">
+            <div class="bg-[#050b08] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <!-- Glow Effect -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-orange-600/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+                <div class="text-center mb-10 relative z-10">
+                    <span class="bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-6 shadow-lg">O Desafio</span>
+                    <h3 class="text-4xl md:text-5xl font-black text-orange-500 uppercase italic tracking-tighter leading-tight">
+                        Vender de 9 a 17 carros <br/>
+                        <span class="text-white">em apenas 3 dias</span>
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                    <!-- Quando Card -->
+                    <div class="bg-[#0a1812] border border-[#1a382a] rounded-2xl p-6 flex items-center gap-5 hover:border-orange-500/50 transition duration-300">
+                        <div class="bg-gradient-to-br from-orange-500 to-orange-700 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg border border-orange-400/30">
+                            📅
                         </div>
-                        <h4 class="font-bold text-lg mb-2">O Gancho</h4>
+                        <div>
+                            <h4 class="text-orange-500 font-black uppercase tracking-widest text-sm mb-1">Quando?</h4>
+                            <p class="text-white font-bold text-xl leading-none">26, 27 e 28<br/><span class="text-base text-slate-300 font-normal">de Março</span></p>
+                        </div>
+                    </div>
+                    <!-- Pra Quem Card -->
+                    <div class="bg-[#0a1812] border border-[#1a382a] rounded-2xl p-6 flex items-center gap-5 hover:border-orange-500/50 transition duration-300">
+                        <div class="bg-gradient-to-br from-blue-600 to-indigo-800 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg border border-blue-400/30">
+                            🏆
+                        </div>
+                        <div>
+                            <h4 class="text-orange-500 font-black uppercase tracking-widest text-sm mb-1">Pra Quem</h4>
+                            <p class="text-slate-300 text-sm leading-tight">Exclusivo para<br/><strong class="text-white text-xl">100 lojas G30</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Formula Section -->
+        <section id="formula" class="bg-[#0a1812] border border-[#1a382a] text-white rounded-2xl overflow-hidden shadow-2xl pt-24 -mt-24">
+            <div class="p-8 md:p-12 text-center relative overflow-hidden">
+                <!-- Subtle background glow -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/20 via-transparent to-transparent pointer-events-none"></div>
+                
+                <h3 class="text-3xl font-black uppercase italic mb-4 relative z-10 text-white">A Fórmula de Alta Conversão</h3>
+                <p class="text-slate-300 mb-10 max-w-2xl mx-auto relative z-10 text-lg">Todo vídeo neste feirão segue uma estrutura desenhada para prender a atenção e gerar ação imediata.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left relative z-10">
+                    <div class="bg-[#050b08] p-6 rounded-xl border-t-4 border-yellow-500 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-yellow-500 font-black text-2xl italic">01</span>
+                            <span class="text-xs font-mono bg-[#1a382a] px-2 py-1 rounded text-slate-300 border border-[#234d3a]">Max 5s</span>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2 text-white">O Gancho</h4>
                         <p class="text-sm text-slate-400">Interrompe o scroll. Foca na dor, desejo ou perfil do cliente ("Você que busca...").</p>
                     </div>
 
-                    <div class="bg-slate-800 p-6 rounded-lg border-t-4 border-blue-400">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-blue-400 font-bold text-xl">02</span>
-                            <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-slate-300">15-20s</span>
+                    <div class="bg-[#050b08] p-6 rounded-xl border-t-4 border-blue-500 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-500 font-black text-2xl italic">02</span>
+                            <span class="text-xs font-mono bg-[#1a382a] px-2 py-1 rounded text-slate-300 border border-[#234d3a]">15-20s</span>
                         </div>
-                        <h4 class="font-bold text-lg mb-2">A Apresentação</h4>
+                        <h4 class="font-bold text-xl mb-2 text-white">A Apresentação</h4>
                         <p class="text-sm text-slate-400">Visão geral rápida. 2 ou 3 pontos fortes do carro que validam o gancho.</p>
                     </div>
 
-                    <div class="bg-slate-800 p-6 rounded-lg border-t-4 border-green-400">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-green-400 font-bold text-xl">03</span>
-                            <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-slate-300">Max 10s</span>
+                    <div class="bg-[#050b08] p-6 rounded-xl border-t-4 border-orange-500 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-orange-500 font-black text-2xl italic">03</span>
+                            <span class="text-xs font-mono bg-[#1a382a] px-2 py-1 rounded text-slate-300 border border-[#234d3a]">Max 10s</span>
                         </div>
-                        <h4 class="font-bold text-lg mb-2">A Chamada (CTA)</h4>
+                        <h4 class="font-bold text-xl mb-2 text-white">A Chamada (CTA)</h4>
                         <p class="text-sm text-slate-400">Comando único e claro. Sem confusão. "Clique e Agende".</p>
                     </div>
                 </div>
@@ -89,61 +136,272 @@
 
         <!-- Estratégia, Calendário e Funis -->
         <section id="estrategia" class="space-y-8 pt-24 -mt-24">
-            <div class="border-b border-slate-200 pb-4 mb-6">
-                <h3 class="text-3xl font-bold text-slate-900">Calendário e Funil de Vendas</h3>
-                <p class="text-slate-500 mt-2 text-lg">Cronograma oficial e a base da nossa estratégia de distribuição de conteúdo (Tráfego Pago).</p>
+            <div class="border-b border-[#1a382a] pb-4 mb-8">
+                <h3 class="text-3xl font-black text-white uppercase italic">Calendário e Funil de Vendas</h3>
+                <p class="text-slate-400 mt-2 text-lg">O cronograma de eventos e a estratégia oficial de Tráfego Pago.</p>
             </div>
 
-            <!-- Live Card -->
-            <div class="bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl p-8 text-white shadow-lg flex flex-col md:flex-row items-center justify-between">
+            <!-- Live Card (Abertura antes do feirão) -->
+            <div class="bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl p-8 text-white shadow-[0_0_30px_rgba(234,88,12,0.3)] flex flex-col md:flex-row items-center justify-between border border-orange-500/50">
                 <div>
-                    <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30">Evento Oficial</span>
-                    <h4 class="text-3xl font-bold mt-4 mb-2">Live de Abertura</h4>
-                    <p class="text-orange-50 max-w-md">O grande pontapé inicial do 1º Mega Feirão G30. Prepare sua equipe de plantão para receber os leads em tempo real!</p>
+                    <span class="bg-black/30 px-3 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border border-white/20 shadow-inner">Véspera do Desafio</span>
+                    <h4 class="text-4xl font-black mt-5 mb-2 italic tracking-tight">Live de Abertura</h4>
+                    <p class="text-orange-100 max-w-md text-lg">O grande pontapé inicial que antecede os 3 dias de vendas. Prepare a equipa para o aquecimento!</p>
                 </div>
-                <div class="mt-6 md:mt-0 bg-white text-orange-600 p-6 rounded-xl text-center min-w-[220px] shadow-xl transform md:scale-110">
-                    <div class="text-5xl font-black tracking-tight">25/03</div>
-                    <div class="text-xl font-bold uppercase tracking-widest text-orange-800">2026</div>
-                    <div class="mt-3 bg-orange-50 text-orange-700 font-bold py-1.5 px-3 rounded text-sm">
+                <div class="mt-8 md:mt-0 bg-[#050b08] text-orange-500 p-6 rounded-2xl text-center min-w-[240px] shadow-2xl transform md:scale-105 border border-[#1a382a]">
+                    <div class="text-5xl font-black tracking-tighter">25/03</div>
+                    <div class="text-xl font-black uppercase tracking-[0.3em] text-slate-500 mt-1">2026</div>
+                    <div class="mt-4 bg-[#133325] text-orange-400 font-bold py-2 px-4 rounded-lg text-sm border border-[#1a382a]">
                         ⏰ Início às 19:30
                     </div>
                 </div>
             </div>
 
             <!-- Tráfego Pago Grid -->
-            <div class="mt-8">
-                <h4 class="text-xl font-bold text-slate-800 mb-4">Estrutura de Tráfego Pago (Conteúdos Base)</h4>
+            <div class="mt-16">
+                <!-- Como Vamos Vender Banner (Baseado na nova imagem) -->
+                <div class="bg-[#ea580c] rounded-3xl p-10 md:p-14 text-center mb-12 relative overflow-hidden shadow-[0_0_40px_rgba(234,88,12,0.2)] border border-orange-500">
+                    <!-- Estrelas decorativas -->
+                    <div class="absolute top-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
+                    
+                    <h3 class="text-5xl md:text-7xl font-black text-[#111827] uppercase tracking-tighter leading-[0.9] mb-10 drop-shadow-sm">
+                        Como<br/>Vamos<br/>Vender?
+                    </h3>
+                    
+                    <div class="inline-block relative">
+                        <!-- Elipse a simular desenho à mão -->
+                        <div class="absolute inset-0 border-[3px] border-white/70 rounded-[100%] -rotate-2 scale-x-110 scale-y-[1.3] pointer-events-none"></div>
+                        <p class="text-2xl md:text-3xl font-bold text-white relative z-10 px-8 py-2 drop-shadow-md">
+                            3 funis validados<br/>de alta conversão
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NOVO: Fluxograma Funil 1 (Baseado na nova imagem) -->
+                <div class="mb-16 relative">
+                    <!-- Título com círculo desenhado -->
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] -rotate-1 scale-x-110 scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">
+                             1- A Força do <span class="text-orange-500">Tráfego Pago</span>
+                         </h3>
+                    </div>
+
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <!-- Glow Effect -->
+                        <div class="absolute -top-24 -left-24 w-64 h-64 bg-orange-600/5 blur-[80px] rounded-full pointer-events-none"></div>
+                        
+                        <!-- Fluxo Superior: ADS -> CARCHAT -> FORMS -->
+                        <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12 relative z-10">
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">ADS</div>
+                            <div class="text-orange-500 text-4xl rotate-90 md:rotate-0">➔</div>
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">CARCHAT</div>
+                            <div class="text-orange-500 text-4xl rotate-90 md:rotate-0">➔</div>
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 relative" id="formsBox">
+                                FORMS
+                            </div>
+                        </div>
+
+                        <!-- Fluxo Inferior: Qualificação -> Central de Leads -->
+                        <div class="relative max-w-5xl mx-auto">
+                            <!-- Linhas conectoras visuais (CSS) -->
+                            <div class="hidden md:block absolute -top-12 left-[78%] w-0.5 h-12 bg-orange-500/40"></div> <!-- Vertical do Forms -->
+                            <div class="hidden md:block absolute top-0 left-[25%] right-[22%] h-0.5 bg-orange-500/40"></div> <!-- Barra horizontal -->
+                            <div class="hidden md:block absolute top-0 left-[25%] w-0.5 h-8 bg-orange-500/40"></div> <!-- Vertical para a esquerda -->
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10 pt-8 md:pt-0">
+                                <!-- Coluna de Qualificação (Esquerda) -->
+                                <div class="md:col-span-5 flex flex-col gap-3 relative">
+                                     <div class="hidden md:block absolute -top-8 left-1/2 -translate-x-1/2 text-orange-500/40">▼</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Troca</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Parcela</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Carro Desejado</div>
+                                </div>
+
+                                <!-- Seta Central -->
+                                <div class="md:col-span-2 flex justify-center text-orange-500 text-6xl rotate-90 md:rotate-0">
+                                    ➝
+                                </div>
+
+                                <!-- Coluna Central de Leads (Direita) -->
+                                <div class="md:col-span-5">
+                                     <div class="bg-gradient-to-br from-[#0a1812] to-orange-950 border-2 border-orange-500 text-white font-black uppercase text-center py-12 rounded-2xl shadow-[0_0_30px_rgba(234,88,12,0.3)] text-3xl leading-tight tracking-tighter transform transition hover:scale-105">
+                                         Central<br/>de Leads
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-center text-slate-400 text-lg mt-12 font-medium tracking-wide uppercase relative z-10">
+                            Captura massiva e qualificação via IA
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NOVO: Fluxograma Funil 2 (Baseado na imagem Abertura e Engajamento) -->
+                <div class="mb-16 relative">
+                    <!-- Título com círculo desenhado -->
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] rotate-2 scale-x-[1.15] scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">
+                             2- Abertura e <span class="text-orange-500">Engajamento</span>
+                         </h3>
+                    </div>
+
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <!-- Glow Effect -->
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-orange-600/5 blur-[80px] rounded-full pointer-events-none"></div>
+                        
+                        <!-- Subtitle -->
+                        <div class="text-center mb-12 relative z-10">
+                            <h4 class="text-slate-400 font-medium tracking-widest uppercase text-sm mb-1">Abertura via Live</h4>
+                            <p class="text-white font-black text-2xl tracking-wide uppercase">Dia 25/Mar às 19H30</p>
+                        </div>
+
+                        <!-- Flow Container -->
+                        <div class="relative z-10 max-w-4xl mx-auto">
+                            <!-- Desktop Grid (Staircase layout) -->
+                            <div class="hidden md:grid grid-cols-[200px_auto_200px_auto_200px] gap-x-4 gap-y-2 justify-center items-center">
+                                
+                                <!-- Row 1 -->
+                                <div class="bg-orange-600 w-full text-white font-black text-xl uppercase py-5 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">
+                                    LIVE
+                                </div>
+                                <div class="text-orange-500 text-4xl text-center">➔</div>
+                                <div class="bg-orange-600 w-full text-white font-black text-lg uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">
+                                    Carchat<br><span class="text-xs font-bold text-orange-200">IA no Direct</span>
+                                </div>
+                                <div></div>
+                                <div></div>
+
+                                <!-- Spacer Row (Arrow Down) -->
+                                <div></div>
+                                <div></div>
+                                <div class="text-orange-500 text-4xl text-center py-2">⬇</div>
+                                <div></div>
+                                <div></div>
+
+                                <!-- Row 2 -->
+                                <div></div>
+                                <div></div>
+                                <div class="bg-orange-600 w-full text-white font-black text-lg uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">
+                                    Ligação<br><span class="text-xs font-bold text-orange-200">Por Telefone</span>
+                                </div>
+                                <div class="text-orange-500 text-4xl text-center">➔</div>
+                                <div class="bg-orange-600 w-full text-white font-black text-xl uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">
+                                    Sinal<br><span class="text-2xl font-black">PIX $</span>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Mobile Flex (Vertical) -->
+                            <div class="md:hidden flex flex-col items-center gap-4">
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-xl uppercase py-5 px-6 rounded-xl shadow-lg tracking-wider text-center">LIVE</div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-lg uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Carchat<br><span class="text-sm font-bold text-orange-200">IA no Direct</span></div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-lg uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Ligação<br><span class="text-sm font-bold text-orange-200">Por Telefone</span></div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-xl uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Sinal<br><span class="text-2xl font-black">PIX $</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-center text-slate-400 text-lg mt-14 font-medium tracking-wide uppercase relative z-10">
+                            Aquecimento da base e oferta ao vivo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NOVO: Fluxograma Funil 3 (Baseado na imagem O Poder da Parceria) -->
+                <div class="mb-16 relative">
+                    <!-- Título com círculo desenhado -->
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] rotate-[-2deg] scale-x-[1.15] scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">
+                             3- O Poder da <span class="text-orange-500">Nossa Parceria</span>
+                         </h3>
+                    </div>
+
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <!-- Glow Effect -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-600/5 blur-[100px] rounded-full pointer-events-none"></div>
+                        
+                        <!-- Subtitle -->
+                        <div class="text-center mb-12 relative z-10">
+                            <h4 class="text-slate-400 font-medium tracking-widest uppercase text-sm mb-1">Funil de Vendas</h4>
+                            <p class="text-white font-black text-2xl tracking-wide uppercase">Com o C6 Auto</p>
+                        </div>
+
+                        <!-- Flow Container (Vertical) -->
+                        <div class="relative z-10 max-w-md mx-auto flex flex-col items-center gap-3">
+                            
+                            <!-- Box 1 -->
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider mb-1">Lista Leads</div>
+                                <div class="text-orange-300 text-sm font-bold uppercase tracking-wide">Pré Aprovados no Banco</div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="text-orange-500 text-4xl">⬇</div>
+
+                            <!-- Box 2 -->
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider">IA Carchat</div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="text-orange-500 text-4xl">⬇</div>
+
+                            <!-- Box 3 -->
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider mb-1">Agendamento</div>
+                                <div class="text-orange-300 text-sm font-bold uppercase tracking-wide">Visita na Loja</div>
+                            </div>
+
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-center text-slate-400 text-lg mt-14 font-medium tracking-wide uppercase relative z-10">
+                            Lista de leads pré-aprovados e agendamento direto pela CarChat.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Grid de Conteúdos (Existente) -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <!-- Conteúdo 1: Institucional -->
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-blue-500 hover:shadow-md transition">
-                        <div class="bg-blue-100 text-blue-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Topo de Funil</div>
-                        <h5 class="text-xl font-bold text-slate-900 mb-2">1. Vídeo Institucional</h5>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Vídeo de alto valor focando na autoridade do G30. Roda continuamente para atrair público novo para a base.</p>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
-                            <strong>🎬 Script Autoridade:</strong><br><br>
-                            <span class="italic">"(Andando pelo pátio e falando) Nada melhor do que colocar a cabeça no travesseiro tendo a certeza que fez um bom negócio. Muitos procuram por um carro, poucos recorrem a uma oportunidade única com qualidade. Afinal... é por isso que o Mega Feirão da G30, unindo 100 lojas em todo o Brasil, te apresenta a chance do ano."</span>
+                    <div class="bg-[#0a1812] rounded-xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-blue-500">
+                        <div class="bg-blue-900/30 text-blue-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-blue-800/50">Topo de Funil</div>
+                        <h5 class="text-xl font-bold text-white mb-2">1. Vídeo Institucional</h5>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Vídeo de alto valor focando na autoridade do G30. Roda continuamente para atrair público novo para a base.</p>
+                        <div class="bg-[#050b08] p-5 rounded-lg border border-[#1a382a] text-sm text-slate-300">
+                            <strong class="text-white">🎬 Script Autoridade:</strong><br><br>
+                            <span class="italic text-slate-400">"(Andando pelo pátio e falando) Nada melhor do que colocar a cabeça no travesseiro tendo a certeza que fez um bom negócio. Muitos procuram por um carro, poucos recorrem a uma oportunidade única com qualidade. Afinal... é por isso que o Mega Feirão da G30, unindo 100 lojas em todo o Brasil, te apresenta a chance do ano."</span>
                         </div>
                     </div>
 
                     <!-- Conteúdo 2: Prova Social -->
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-purple-500 hover:shadow-md transition">
-                        <div class="bg-purple-100 text-purple-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Meio de Funil</div>
-                        <h5 class="text-xl font-bold text-slate-900 mb-2">2. Prova Social</h5>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Depoimentos reais e entregas de chaves. Gera confiança instantânea e quebra as principais objeções do cliente.</p>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
-                            <strong>🎯 Foco da Campanha:</strong><br><br>
-                            Apresentar para o público que já assistiu ao vídeo institucional. Mostre o cliente feliz saindo da loja com o carro. A mensagem é: "Pessoas reais estão aproveitando o feirão, você vai ficar de fora?".
+                    <div class="bg-[#0a1812] rounded-xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-purple-500">
+                        <div class="bg-purple-900/30 text-purple-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-purple-800/50">Meio de Funil</div>
+                        <h5 class="text-xl font-bold text-white mb-2">2. Prova Social</h5>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Depoimentos reais e entregas de chaves. Gera confiança instantânea e quebra as principais objeções do cliente.</p>
+                        <div class="bg-[#050b08] p-5 rounded-lg border border-[#1a382a] text-sm text-slate-300">
+                            <strong class="text-white">🎯 Foco da Campanha:</strong><br><br>
+                            Apresentar para o público que já assistiu ao vídeo institucional. Mostre o cliente feliz saindo da loja com o carro. A mensagem é: "Pessoas reais estão a aproveitar o feirão, você vai ficar de fora?".
                         </div>
                     </div>
 
                     <!-- Conteúdo 3: Vendas / Urgência -->
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full border-t-4 border-t-red-500 hover:shadow-md transition">
-                        <div class="bg-red-100 text-red-800 w-max px-3 py-1 rounded text-xs font-bold mb-4 uppercase tracking-wide">Fundo de Funil</div>
-                        <h5 class="text-xl font-bold text-slate-900 mb-2">3. Oferta Única (Vendas)</h5>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Os roteiros práticos! Gatilhos de escassez e urgência para conversão imediata de quem já conhece a marca.</p>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm text-slate-700">
-                            <strong>⚡ Gatilho Mental & Ação:</strong><br><br>
-                            Direcionar o tráfego de Remarketing diretamente para o WhatsApp do seu time. Use os scripts da categoria <strong>🔥 Urgência & Escassez</strong> abaixo ("Última unidade", "Só hoje", "Amanhã pode ser tarde").
+                    <div class="bg-[#0a1812] rounded-xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-orange-500">
+                        <div class="bg-orange-900/30 text-orange-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-orange-800/50">Fundo de Funil</div>
+                        <h5 class="text-xl font-bold text-white mb-2">3. Oferta Única (Vendas)</h5>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Os guiões práticos! Gatilhos de escassez e urgência para conversão imediata para quem já conhece a marca.</p>
+                        <div class="bg-[#050b08] p-5 rounded-lg border border-[#1a382a] text-sm text-slate-300">
+                            <strong class="text-white">⚡ Gatilho Mental & Ação:</strong><br><br>
+                            Direcionar o tráfego de Remarketing diretamente para o WhatsApp da sua equipa. Use os guiões da categoria <strong class="text-orange-400">🔥 Urgência & Escassez</strong> abaixo.
                         </div>
                     </div>
                 </div>
@@ -152,9 +410,9 @@
 
         <!-- Informativo Section (All Scripts) -->
         <section id="informativo" class="space-y-8 pt-24 -mt-24">
-            <div class="border-b border-slate-200 pb-4 mb-6">
-                <h3 class="text-3xl font-bold text-slate-900">Roteiros Disponíveis</h3>
-                <p class="text-slate-500 mt-2 text-lg">Consulte abaixo todos os roteiros organizados para o <strong>Fundo de Funil</strong>. Escolha o modelo, revise a melhor opção de gancho e abra o teleprompter para facilitar a sua gravação.</p>
+            <div class="border-b border-[#1a382a] pb-4 mb-8">
+                <h3 class="text-3xl font-black text-white uppercase italic">Roteiros Disponíveis</h3>
+                <p class="text-slate-400 mt-2 text-lg">Consulte abaixo todos os roteiros organizados para o <strong>Fundo de Funil</strong>. Escolha o modelo e abra o teleprompter para gravar.</p>
             </div>
             
             <div id="allScriptsContainer" class="space-y-8">
@@ -166,13 +424,13 @@
 
     <!-- Teleprompter Modal -->
     <div id="teleprompterModal" class="fixed inset-0 bg-black z-[100] hidden flex flex-col">
-        <div class="flex justify-between items-center p-4 bg-gray-900 border-b border-gray-800">
-            <h3 class="text-white font-bold">Modo Teleprompter</h3>
-            <button id="closeTeleprompter" class="text-gray-400 hover:text-white px-4 py-2">Fechar [X]</button>
+        <div class="flex justify-between items-center p-6 bg-[#050b08] border-b border-[#1a382a]">
+            <h3 class="text-white font-black uppercase italic tracking-wider">Modo Teleprompter</h3>
+            <button id="closeTeleprompter" class="text-slate-400 hover:text-white px-4 py-2 font-bold uppercase text-sm tracking-wider">Fechar [X]</button>
         </div>
-        <div class="flex-1 overflow-y-auto p-8 flex items-center justify-center">
+        <div class="flex-1 overflow-y-auto p-8 flex items-center justify-center bg-[#020504]">
             <div class="max-w-4xl text-center">
-                <p id="prompterText" class="teleprompter-text">
+                <p id="prompterText" class="teleprompter-text font-bold tracking-tight">
                     Selecione um roteiro para visualizar aqui.
                 </p>
             </div>
@@ -180,16 +438,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 mt-12">
+    <footer class="bg-[#050b08] border-t border-[#1a382a] text-slate-500 py-10 mt-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm">Desenvolvido para o 1º Mega Feirão G30.</p>
+            <p class="text-sm font-bold uppercase tracking-widest">Desenvolvido para o 1º Mega Feirão G30.</p>
         </div>
     </footer>
 
     <!-- JavaScript Logic -->
     <script>
         // --- DATA STORE ---
-        // Derived directly from the provided source document
         const scriptsData = [
             // Standard Category
             {
@@ -395,23 +652,23 @@
 
             scriptsData.forEach(car => {
                 const isUrgency = car.category === 'urgency';
-                const urgencyBadge = isUrgency ? '<span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ml-3">🔥 Urgência & Escassez</span>' : '';
+                const urgencyBadge = isUrgency ? '<span class="bg-orange-500/20 text-orange-400 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider ml-3 border border-orange-500/30">🔥 Urgência & Escassez</span>' : '';
                 
                 const card = document.createElement('div');
-                card.className = 'bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden';
+                card.className = 'bg-[#0a1812] rounded-2xl shadow-xl border border-[#1a382a] overflow-hidden';
                 
                 card.innerHTML = `
-                    <div class="bg-slate-50 p-6 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="bg-[#050b08] p-6 border-b border-[#1a382a] flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
-                            <h4 class="text-2xl font-bold text-slate-900 flex items-center">
+                            <h4 class="text-2xl font-black text-white flex items-center italic tracking-tight">
                                 🚘 ${car.model} ${urgencyBadge}
                             </h4>
                             <div class="flex flex-wrap gap-2 mt-3">
-                                ${car.tags.map(tag => `<span class="bg-white border border-slate-200 text-slate-600 text-xs px-3 py-1 rounded-full font-medium shadow-sm">${tag}</span>`).join('')}
+                                ${car.tags.map(tag => `<span class="bg-[#133325] border border-[#1a382a] text-slate-300 text-xs px-3 py-1 rounded-full font-bold shadow-sm">${tag}</span>`).join('')}
                             </div>
                         </div>
-                        <div class="bg-blue-50 text-blue-800 text-sm p-4 rounded-lg border border-blue-100 flex-1 max-w-md">
-                            <strong>🎥 Dica de Filmagem:</strong> <br/> ${car.tip}
+                        <div class="bg-emerald-900/20 text-emerald-400 text-sm p-4 rounded-lg border border-emerald-800/40 flex-1 max-w-md">
+                            <strong class="text-emerald-300">🎥 Dica de Filmagem:</strong> <br/> ${car.tip}
                         </div>
                     </div>
                     
@@ -419,30 +676,30 @@
                         <!-- Hook Option 1 -->
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <h5 class="font-bold text-slate-700 uppercase text-xs tracking-wider bg-slate-100 px-2 py-1 rounded">Opção 1: ${car.hooks[0].label}</h5>
-                                <button onclick="openTeleprompter(${car.id}, 0)" class="text-xs bg-slate-800 text-white px-3 py-1.5 rounded hover:bg-slate-700 transition flex items-center gap-1 shadow-sm">
+                                <h5 class="font-black text-slate-400 uppercase text-xs tracking-widest bg-[#133325] px-3 py-1.5 rounded border border-[#1a382a]">Opção 1: ${car.hooks[0].label}</h5>
+                                <button onclick="openTeleprompter(${car.id}, 0)" class="text-xs font-bold uppercase tracking-wider bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center gap-2 shadow-lg">
                                     📺 Abrir Teleprompter
                                 </button>
                             </div>
-                            <div class="border-l-4 border-slate-300 pl-4 space-y-3">
-                                <p class="text-slate-800"><strong>[Gancho]</strong> ${car.hooks[0].text}</p>
-                                <p class="text-slate-600"><strong>[Apresentação]</strong> ${car.body}</p>
-                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-orange-600 font-semibold">${car.cta}</span></p>
+                            <div class="border-l-4 border-slate-600 pl-4 space-y-3">
+                                <p class="text-white text-lg font-medium"><strong>[Gancho]</strong> ${car.hooks[0].text}</p>
+                                <p class="text-slate-400"><strong>[Apresentação]</strong> ${car.body}</p>
+                                <p class="text-white"><strong>[Chamada]</strong> <span class="text-orange-400 font-bold">${car.cta}</span></p>
                             </div>
                         </div>
 
                         <!-- Hook Option 2 -->
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <h5 class="font-bold text-slate-700 uppercase text-xs tracking-wider bg-slate-100 px-2 py-1 rounded">Opção 2: ${car.hooks[1].label}</h5>
-                                <button onclick="openTeleprompter(${car.id}, 1)" class="text-xs bg-slate-800 text-white px-3 py-1.5 rounded hover:bg-slate-700 transition flex items-center gap-1 shadow-sm">
+                                <h5 class="font-black text-slate-400 uppercase text-xs tracking-widest bg-[#133325] px-3 py-1.5 rounded border border-[#1a382a]">Opção 2: ${car.hooks[1].label}</h5>
+                                <button onclick="openTeleprompter(${car.id}, 1)" class="text-xs font-bold uppercase tracking-wider bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center gap-2 shadow-lg">
                                     📺 Abrir Teleprompter
                                 </button>
                             </div>
-                            <div class="border-l-4 border-slate-300 pl-4 space-y-3">
-                                <p class="text-slate-800"><strong>[Gancho]</strong> ${car.hooks[1].text}</p>
-                                <p class="text-slate-600"><strong>[Apresentação]</strong> ${car.body}</p>
-                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-orange-600 font-semibold">${car.cta}</span></p>
+                            <div class="border-l-4 border-slate-600 pl-4 space-y-3">
+                                <p class="text-white text-lg font-medium"><strong>[Gancho]</strong> ${car.hooks[1].text}</p>
+                                <p class="text-slate-400"><strong>[Apresentação]</strong> ${car.body}</p>
+                                <p class="text-white"><strong>[Chamada]</strong> <span class="text-orange-400 font-bold">${car.cta}</span></p>
                             </div>
                         </div>
                     </div>
