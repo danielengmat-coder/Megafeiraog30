@@ -14,7 +14,7 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
-    <!-- Chosen Palette: Modern Automotive Retail - Warm Neutrals (Slate/Gray) with Urgent Red Accents -->
+    <!-- Chosen Palette: Modern Automotive Retail - Warm Neutrals (Slate/Gray) with Urgent Orange Accents -->
     <!-- Application Structure Plan: 
          1. Strategy Dashboard: Visual breakdown of the script inventory (Types & Triggers) to help managers balance the campaign content.
          2. The Formula: Educational section reinforcing the Hook-Presentation-CTA structure.
@@ -36,12 +36,12 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center text-white font-bold">G30</div>
-                <h1 class="text-xl font-bold tracking-tight text-slate-900">Mega Feirão <span class="text-red-600">Studio</span></h1>
+                <img src="https://raw.githubusercontent.com/G30IA/g30-summit-dashboard/44186b90d876cbf1a86191c78bf3ff02c34299cd/G30logonova" alt="G30 Logo" class="h-8 w-auto object-contain" onerror="this.outerHTML='<div class=&quot;w-8 h-8 bg-orange-500 rounded flex items-center justify-center text-white font-bold&quot;>G30</div>'">
+                <h1 class="text-xl font-bold tracking-tight text-slate-900">Mega Feirão <span class="text-orange-500">Studio</span></h1>
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#formula" class="text-slate-500 hover:text-slate-900 px-3 py-2 text-sm font-medium">A Fórmula</a>
-                <a href="#informativo" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition">Ver Todos os Roteiros</a>
+                <a href="#informativo" class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition">Ver Todos os Roteiros</a>
             </nav>
         </div>
     </header>
@@ -338,7 +338,7 @@
 
             scriptsData.forEach(car => {
                 const isUrgency = car.category === 'urgency';
-                const urgencyBadge = isUrgency ? '<span class="bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ml-3">🔥 Urgência & Escassez</span>' : '';
+                const urgencyBadge = isUrgency ? '<span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ml-3">🔥 Urgência & Escassez</span>' : '';
                 
                 const card = document.createElement('div');
                 card.className = 'bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden';
@@ -370,7 +370,7 @@
                             <div class="border-l-4 border-slate-300 pl-4 space-y-3">
                                 <p class="text-slate-800"><strong>[Gancho]</strong> ${car.hooks[0].text}</p>
                                 <p class="text-slate-600"><strong>[Apresentação]</strong> ${car.body}</p>
-                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-red-600 font-semibold">${car.cta}</span></p>
+                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-orange-600 font-semibold">${car.cta}</span></p>
                             </div>
                         </div>
 
@@ -385,7 +385,7 @@
                             <div class="border-l-4 border-slate-300 pl-4 space-y-3">
                                 <p class="text-slate-800"><strong>[Gancho]</strong> ${car.hooks[1].text}</p>
                                 <p class="text-slate-600"><strong>[Apresentação]</strong> ${car.body}</p>
-                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-red-600 font-semibold">${car.cta}</span></p>
+                                <p class="text-slate-800"><strong>[Chamada]</strong> <span class="text-orange-600 font-semibold">${car.cta}</span></p>
                             </div>
                         </div>
                     </div>
