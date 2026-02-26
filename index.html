@@ -499,6 +499,194 @@
 
     <!-- JavaScript Logic -->
     <script>
+        // --- DATA STORE: ROTEIROS DE CARROS ---
+        const scriptsData = [
+            // Standard Category
+            {
+                id: 1,
+                model: "Chevrolet Onix",
+                category: "standard",
+                tags: ["Economia", "Tecnologia", "Hatch"],
+                tip: "Comece filmando o farol/grade frontal e depois entre no carro mostrando o painel ligado.",
+                hooks: [
+                    { label: "Atenção", text: "Você que busca economia extrema, conectividade de ponta e não abre mão de um design moderno, fica aqui comigo para conhecer essa máquina." },
+                    { label: "Perfil", text: "Você que trabalha rodando o dia todo e precisa de um parceiro econômico e tecnológico, não passa esse vídeo e confere os detalhes desse carro." }
+                ],
+                body: "Esse é o Chevrolet Onix. O hatch que conquistou o Brasil! Ele conta com um motor super econômico que poupa o seu bolso, uma central multimídia completíssima para você não perder nada, e uma direção leve que deixa qualquer trajeto no trânsito muito mais fácil.",
+                cta: "Se você chegou até aqui é porque sabe que esse carro é para você. Então clica no botão aqui embaixo, fala com a nossa equipe agora e já agenda a sua visita no Mega Feirão G30 para conferir ele de perto!"
+            },
+            {
+                id: 2,
+                model: "Hyundai HB20",
+                category: "standard",
+                tags: ["Estilo", "Conforto", "Hatch"],
+                tip: "Mostre o design lateral do carro em um ângulo mais baixo e depois foque nos detalhes do banco e acabamento interno.",
+                hooks: [
+                    { label: "Atenção", text: "Você que não abre mão de ter um carro estiloso, confortável e com mecânica confiável, vem comigo conferir essa exclusividade do nosso feirão." },
+                    { label: "Perfil", text: "Você que é jovem, está buscando o seu primeiro carro e quer algo moderno e sem dor de cabeça, confere comigo os detalhes desse veículo." }
+                ],
+                body: "Apresento para você o Hyundai HB20. Um carro com linhas esportivas marcantes, um acabamento interno premium que se destaca na categoria e a tranquilidade de uma mecânica resistente que não te deixa na mão.",
+                cta: "Gostou do que viu? Então não perde tempo. Clica no link aqui embaixo, chama nossa equipe no WhatsApp e garante o seu horário para fazer um test drive exclusivo."
+            },
+            {
+                id: 3,
+                model: "Fiat Argo",
+                category: "standard",
+                tags: ["Espaço", "Robustez", "Hatch"],
+                tip: "Comece abrindo o porta-malas ou a porta traseira para mostrar o espaço, depois passe para a visão do motorista.",
+                hooks: [
+                    { label: "Atenção", text: "Você que procura um carro robusto, com ótimo espaço interno e que seja valente no dia a dia, fica nesse vídeo que eu tenho a opção certa." },
+                    { label: "Perfil", text: "Você que é pai ou mãe de família, precisa de um porta-malas bacana e conforto para levar a garotada, acompanha comigo os detalhes desse carro." }
+                ],
+                body: "Dá uma olhada neste Fiat Argo. Um hatch valente com uma suspensão perfeita para os desafios da cidade, muito conforto no banco de trás para a família inteira e um acabamento que surpreende quem assume o volante.",
+                cta: "Se esse é o carro que vai facilitar a sua rotina, clica agora no botão abaixo, fala com o nosso time e agenda a sua visita aqui no feirão antes que alguém compre primeiro!"
+            },
+            {
+                id: 4,
+                model: "Renault Kwid",
+                category: "standard",
+                tags: ["Preço", "Agilidade", "Hatch"],
+                tip: "Mostre o carro estacionado em uma vaga um pouco mais apertada para provar a agilidade, depois mostre a altura do solo.",
+                hooks: [
+                    { label: "Atenção", text: "Você que quer pagar pouco, ter agilidade na cidade e ainda levar um carro super econômico, não pula o vídeo e olha isso aqui." },
+                    { label: "Perfil", text: "Você que é estudante ou acabou de tirar a carteira e quer um carro fácil de estacionar e barato de manter, confere comigo os detalhes desse guerreiro." }
+                ],
+                body: "Esse é o Renault Kwid, o SUV dos compactos. Ele tem uma altura de solo excelente para você não raspar em valetas, um consumo de combustível que parece de moto e o tamanho perfeito para caber em absolutamente qualquer vaga.",
+                cta: "Se você quer levar esse parceiro para a sua garagem, clica aqui embaixo, fala com um dos nossos consultores e vem tomar um café com a gente no Mega Feirão G30!"
+            },
+            // Urgency/Scarcity Category
+            {
+                id: 5,
+                model: "Volkswagen Polo",
+                category: "urgency",
+                tags: ["Design Premium", "Desempenho", "Hatch"],
+                tip: "Destaque o painel digital e o visual esportivo.",
+                hooks: [
+                    { label: "Urgência", text: "Amanhã pode ser tarde demais e você sabe disso. Carro premium com essa condição some rápido, por isso te apresento agora esse veículo." },
+                    { label: "Oportunidade", text: "Oportunidade única! E se eu fosse você, já me preparava para clicar aqui embaixo e falar com a minha equipe, mas calma... antes, confere comigo os detalhes desse carro." }
+                ],
+                body: "Apresento o Volkswagen Polo. Um hatch com pegada esportiva, painel 100% digital e um motor que responde na hora que você pisa. É dirigir pra se apaixonar na primeira volta.",
+                cta: "Essa unidade não vai dormir no pátio hoje. Clica no link agora, chama a minha equipe e garante a sua reserva antes que outro cliente leve!"
+            },
+            {
+                id: 6,
+                model: "Jeep Renegade",
+                category: "urgency",
+                tags: ["Status", "Aventura", "SUV"],
+                tip: "Mostre a grade frontal icônica e a altura de direção.",
+                hooks: [
+                    { label: "Sonho", text: "Sabe aquele sonho que você vem adiando? A chance de realizar é agora, mas o relógio tá correndo. Vem ver isso aqui." },
+                    { label: "Exclusividade", text: "Uma exclusividade dessas não dura 24 horas no nosso feirão. Presta muita atenção porque esse carro pode ser seu, mas tem que ser rápido." }
+                ],
+                body: "Olha a imponência desse Jeep Renegade. O SUV mais desejado do Brasil, com um acabamento impecável, posição de dirigir elevada e muita segurança pra você e pra sua família desbravarem qualquer caminho.",
+                cta: "Quem pensa muito, fica sem. Clica aqui embaixo agora, manda mensagem pra nossa equipe e vem fechar negócio hoje mesmo!"
+            },
+            {
+                id: 7,
+                model: "Fiat Strada",
+                category: "urgency",
+                tags: ["Trabalho", "Revenda", "Pickup"],
+                tip: "Destaque a caçamba e a versatilidade.",
+                hooks: [
+                    { label: "Rapidez", text: "Você sabe que picape boa e com preço justo some do pátio no mesmo dia, né? Então não pisca, senão você perde." },
+                    { label: "Trabalho", text: "Amanhã pode ser tarde demais e você sabe disso. Quem trabalha não pode perder tempo, é por isso que te apresento agora essa bruta." }
+                ],
+                body: "Essa é a Fiat Strada, a líder absoluta de vendas! Caçamba espaçosa para o seu trabalho, conforto de carro de passeio para o seu fim de semana e a revenda mais rápida do mercado.",
+                cta: "Você encontrou a sua ferramenta de trabalho. Clica no botão aqui embaixo, fala com nossos consultores e vem buscar a sua antes que seu concorrente compre."
+            },
+            {
+                id: 8,
+                model: "Chevrolet Tracker",
+                category: "urgency",
+                tags: ["Tecnologia", "Espaço", "SUV"],
+                tip: "Foque no teto solar (se houver) e multimídia.",
+                hooks: [
+                    { label: "Emoção", text: "Oportunidade Única! E se eu fosse você já me preparava para clicar aqui embaixo, mas segura a emoção e confere comigo os detalhes desse SUV." },
+                    { label: "Unidade Única", text: "Eu tenho apenas uma unidade com essa condição especial. Se você piscar, já era. Confere os detalhes dessa máquina." }
+                ],
+                body: "Chevrolet Tracker, o SUV que une um design arrebatador com o melhor consumo da categoria. Teto solar, wi-fi nativo e espaço de sobra pra família viajar com muito conforto.",
+                cta: "Não deixa essa chance passar. Clica agora no link abaixo, agenda sua visita com o nosso time e vem fazer um test drive!"
+            },
+            {
+                id: 9,
+                model: "Toyota Corolla",
+                category: "urgency",
+                tags: ["Luxo", "Confiabilidade", "Sedan"],
+                tip: "Filmagem clássica e estável, transmitindo elegância.",
+                hooks: [
+                    { label: "Raridade", text: "Carro de garagem, raridade no mercado. Quem conhece sabe que não dá tempo de pensar muito. Vem conferir." },
+                    { label: "Procedência", text: "Amanhã pode ser tarde demais e você sabe disso. Achar um carro com essa procedência é como ganhar na loteria. Te apresento agora essa exclusividade." }
+                ],
+                body: "Dispensa apresentações, né? Toyota Corolla. Sinônimo de luxo, conforto extremo, mecânica inquebrável e um valor que nunca despenca. É o carro para a vida toda.",
+                cta: "Um seminovo impecável assim voa do estoque. Clica aqui embaixo, fala com a equipe G30 e reserva o seu agora!"
+            },
+            {
+                id: 10,
+                model: "Volkswagen Gol",
+                category: "urgency",
+                tags: ["Manutenção", "Guerreiro", "Hatch"],
+                tip: "Simplicidade e robustez.",
+                hooks: [
+                    { label: "Relâmpago", text: "Oportunidade relâmpago! Esse é daqueles que a gente posta e vende em minutos. Fica comigo e olha por quê." },
+                    { label: "Custo", text: "A chance de sair de carro novo, pagando pouco, acabou de bater na sua tela, mas ela não vai esperar." }
+                ],
+                body: "O guerreiro do Brasil! Volkswagen Gol. Mecânica de confiança, peças baratas e pronto pra rodar todo dia sem te dar dor de cabeça. O famoso \"pau pra toda obra\".",
+                cta: "O feirão tá lotado e esse carro tá na mira de muita gente. Clica no link, garante seu atendimento com nossa equipe e corre pra cá!"
+            },
+            {
+                id: 11,
+                model: "Nissan Kicks",
+                category: "urgency",
+                tags: ["Economia", "Tecnologia", "SUV"],
+                tip: "Destaque os bancos e câmeras.",
+                hooks: [
+                    { label: "Emoção", text: "Emoção pura! Sabe aquele carro que faz o coração bater mais forte? Ele está aqui, mas o cronômetro do feirão tá rodando." },
+                    { label: "Preço", text: "Amanhã pode ser tarde demais e você sabe disso. Oportunidade de SUV completão com preço de hatch é agora!" }
+                ],
+                body: "Esse é o Nissan Kicks. Design japonês inconfundível, bancos com tecnologia gravidade zero para você não cansar no trânsito e um consumo excelente para um SUV.",
+                cta: "Pra garantir essa condição exclusiva, você precisa agir. Clica no botão agora, fala com a nossa equipe e vem buscar sua chave!"
+            },
+            {
+                id: 12,
+                model: "Fiat Mobi",
+                category: "urgency",
+                tags: ["Urbano", "Economia", "Hatch"],
+                tip: "Mostre a facilidade de acesso.",
+                hooks: [
+                    { label: "Parcela", text: "Oportunidade Única! E se eu fosse você, já me preparava para clicar aqui embaixo. Parcela pequena que cabe no bolso, confere comigo!" },
+                    { label: "App/Trabalho", text: "Seu primeiro carro ou seu parceiro de aplicativo está na sua frente, mas com esse preço, ele não passa de hoje." }
+                ],
+                body: "Fiat Mobi. Compacto por fora pra caber em qualquer vaga, e gigante na economia. O carro ideal pra você fugir do transporte público sem se apertar no fim do mês.",
+                cta: "É a sua vez de acelerar! Clica no link, chama a equipe G30 e vem fechar negócio antes que acabe."
+            },
+            {
+                id: 13,
+                model: "Honda Civic",
+                category: "urgency",
+                tags: ["Esportividade", "Status", "Sedan"],
+                tip: "Ângulos agressivos e interior cockpit.",
+                hooks: [
+                    { label: "Exclusivo", text: "Quem gosta de carro exclusivo vai enlouquecer com esse aqui. Mas atenção: é a única unidade do feirão." },
+                    { label: "Competição", text: "Amanhã pode ser tarde demais. Se você demorar pra mandar mensagem, vai ver outro cliente saindo com ele da loja. Te apresento essa nave agora." }
+                ],
+                body: "Olha a agressividade desse Honda Civic. Um sedan esportivo, com motor potente, interior premium que parece um cockpit de avião e estabilidade de sobra na pista.",
+                cta: "Esse não é um carro pra quem tem dúvida. Clica no link abaixo agora, fala com a nossa equipe e garante essa nave pra você!"
+            },
+            {
+                id: 14,
+                model: "Ford Ka",
+                category: "urgency",
+                tags: ["Custo-benefício", "Potência", "Hatch"],
+                tip: "Mostre o motor ou interior espaçoso.",
+                hooks: [
+                    { label: "Porta", text: "A oportunidade que você estava esperando bateu na sua porta. Você vai abrir ou vai deixar outro acelerar no seu lugar?" },
+                    { label: "Completo", text: "Oportunidade Única, e se eu fosse você já me preparava para clicar aqui embaixo. Carro completo com condição de feirão de verdade, olha isso!" }
+                ],
+                body: "O queridinho do custo-benefício, Ford Ka! Motor esperto que anda muito bem na estrada e na cidade, direção elétrica super leve e um espaço interno que surpreende.",
+                cta: "Bateu o olho, gostou? Então não perde a chance. Clica no botão aqui embaixo e agenda com a nossa equipe agora!"
+            }
+        ];
+
         // --- DATA STORE: 10 MENSAGENS MAPA ---
         const mapMessages = [
             { id: 1, title: "Clareza Direta", text: "[Nome do cliente], me ajuda aqui, tô organizando meus atendimentos. Você ainda tá avaliando comprar seu (carro/moto) ou já resolveu?" },
@@ -515,9 +703,7 @@
 
         // --- DOM ELEMENTS & INIT ---
         document.addEventListener('DOMContentLoaded', () => {
-            if(typeof renderAllScripts === 'function') {
-                renderAllScripts();
-            }
+            renderAllScripts();
             renderMapMessages();
             setupLocalEventListeners();
         });
@@ -579,6 +765,71 @@
             }, 100);
         }
 
+        // --- RENDER SCRIPTS (O FEIRÃO) ---
+        function renderAllScripts() {
+            const container = document.getElementById('allScriptsContainer');
+            if(!container) return;
+            container.innerHTML = '';
+
+            scriptsData.forEach(car => {
+                const isUrgency = car.category === 'urgency';
+                const urgencyBadge = isUrgency ? '<span class="bg-orange-500/20 text-orange-400 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider ml-3 border border-orange-500/30">🔥 Urgência & Escassez</span>' : '';
+                
+                const card = document.createElement('div');
+                card.className = 'bg-[#0a1812] rounded-2xl shadow-xl border border-[#1a382a] overflow-hidden';
+                
+                card.innerHTML = `
+                    <div class="bg-[#050b08] p-6 border-b border-[#1a382a] flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h4 class="text-2xl font-black text-white flex items-center italic tracking-tight">
+                                🚘 ${car.model} ${urgencyBadge}
+                            </h4>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                ${car.tags.map(tag => `<span class="bg-[#133325] border border-[#1a382a] text-slate-300 text-xs px-3 py-1 rounded-full font-bold shadow-sm">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                        <div class="bg-emerald-900/20 text-emerald-400 text-sm p-4 rounded-lg border border-emerald-800/40 flex-1 max-w-md">
+                            <strong class="text-emerald-300">🎥 Dica de Filmagem:</strong> <br/> ${car.tip}
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Hook Option 1 -->
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h5 class="font-black text-slate-400 uppercase text-xs tracking-widest bg-[#133325] px-3 py-1.5 rounded border border-[#1a382a]">Opção 1: ${car.hooks[0].label}</h5>
+                                <button onclick="openTeleprompter(${car.id}, 0)" class="text-xs font-bold uppercase tracking-wider bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center gap-2 shadow-lg">
+                                    📺 Abrir Teleprompter
+                                </button>
+                            </div>
+                            <div class="border-l-4 border-slate-600 pl-4 space-y-3">
+                                <p class="text-white text-lg font-medium"><strong>[Gancho]</strong> ${car.hooks[0].text}</p>
+                                <p class="text-slate-400"><strong>[Apresentação]</strong> ${car.body}</p>
+                                <p class="text-white"><strong>[Chamada]</strong> <span class="text-orange-400 font-bold">${car.cta}</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Hook Option 2 -->
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h5 class="font-black text-slate-400 uppercase text-xs tracking-widest bg-[#133325] px-3 py-1.5 rounded border border-[#1a382a]">Opção 2: ${car.hooks[1].label}</h5>
+                                <button onclick="openTeleprompter(${car.id}, 1)" class="text-xs font-bold uppercase tracking-wider bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center gap-2 shadow-lg">
+                                    📺 Abrir Teleprompter
+                                </button>
+                            </div>
+                            <div class="border-l-4 border-slate-600 pl-4 space-y-3">
+                                <p class="text-white text-lg font-medium"><strong>[Gancho]</strong> ${car.hooks[1].text}</p>
+                                <p class="text-slate-400"><strong>[Apresentação]</strong> ${car.body}</p>
+                                <p class="text-white"><strong>[Chamada]</strong> <span class="text-orange-400 font-bold">${car.cta}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // --- RENDER MAP MESSAGES (PRÉ-VENDAS) ---
         function renderMapMessages() {
             const container = document.getElementById('mensagensMapaContainer');
             if(!container) return;
@@ -602,6 +853,21 @@
                 `;
                 container.appendChild(card);
             });
+        }
+
+        // --- INTERACTION & UTILS ---
+        function openTeleprompter(carId, hookIndex) {
+            const car = scriptsData.find(c => c.id === carId);
+            if (!car) return;
+            
+            const fullText = `${car.hooks[hookIndex].text} \n\n ${car.body} \n\n ${car.cta}`;
+            const prompterTextEl = document.getElementById('prompterText');
+            const teleprompterModal = document.getElementById('teleprompterModal');
+            
+            if(prompterTextEl && teleprompterModal) {
+                prompterTextEl.innerText = fullText;
+                teleprompterModal.classList.remove('hidden');
+            }
         }
 
         function setupLocalEventListeners() {
