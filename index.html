@@ -45,14 +45,20 @@
                 <button onclick="switchTab('main')" id="nav-feirao" class="nav-btn text-orange-500 px-3 py-2 text-sm font-bold uppercase tracking-wider transition">O Feirão</button>
                 <div class="w-px h-4 bg-[#1a382a] mx-2"></div>
                 
-                <!-- Tab 3: Tráfego Pago -->
-                <button onclick="switchTab('trafego')" id="nav-trafego" class="nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2">
-                    <span>🚀 Tráfego & Calendário</span>
+                <!-- Tab 2: Calendário -->
+                <button onclick="switchTab('calendario')" id="nav-calendario" class="nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2">
+                    <span>📅 Calendário</span>
                 </button>
                 <div class="w-px h-4 bg-[#1a382a] mx-2"></div>
 
-                <!-- Tab 2: Pré-Vendas -->
-                <button onclick="switchTab('presales')" id="nav-prevendas" class="nav-btn text-slate-400 hover:text-orange-400 bg-[#133325] border border-[#1a382a] px-5 py-2.5 rounded-md text-sm font-bold uppercase tracking-wide transition shadow-lg flex items-center gap-2">
+                <!-- Tab 3: Tráfego Pago -->
+                <button onclick="switchTab('trafego')" id="nav-trafego" class="nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2">
+                    <span>🚀 Tráfego Pago</span>
+                </button>
+                <div class="w-px h-4 bg-[#1a382a] mx-2"></div>
+
+                <!-- Tab 4: Pré-Vendas -->
+                <button onclick="switchTab('presales')" id="nav-prevendas" class="nav-btn text-slate-400 hover:text-orange-400 bg-[#133325] border border-[#1a382a] px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition shadow-lg flex items-center gap-2">
                     <span>📞 Pré-Vendas & MAPA</span>
                 </button>
             </nav>
@@ -60,6 +66,7 @@
             <!-- Mobile Menu Toggle -->
             <div class="xl:hidden flex items-center gap-2 overflow-x-auto no-scrollbar w-1/2 justify-end">
                  <button onclick="switchTab('main')" class="bg-[#133325] text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase border border-[#1a382a] shrink-0">Feirão</button>
+                 <button onclick="switchTab('calendario')" class="bg-[#133325] text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase border border-[#1a382a] shrink-0">Calendário</button>
                  <button onclick="switchTab('trafego')" class="bg-[#133325] text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase border border-[#1a382a] shrink-0">Tráfego</button>
                  <button onclick="switchTab('presales')" class="bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0">Pré-Vendas</button>
             </div>
@@ -149,37 +156,6 @@
                 </div>
             </section>
 
-            <!-- Como Vamos Vender / Funis Resumo -->
-            <section class="space-y-8">
-                <div class="bg-[#ea580c] rounded-3xl p-10 md:p-14 text-center mb-12 relative overflow-hidden shadow-[0_0_40px_rgba(234,88,12,0.2)] border border-orange-500 max-w-6xl mx-auto">
-                    <div class="absolute top-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
-                    <h3 class="text-5xl md:text-7xl font-black text-[#111827] uppercase tracking-tighter leading-[0.9] mb-10 drop-shadow-sm">Como<br/>Vamos<br/>Vender?</h3>
-                    <div class="inline-block relative">
-                        <div class="absolute inset-0 border-[3px] border-white/70 rounded-[100%] -rotate-2 scale-x-110 scale-y-[1.3] pointer-events-none"></div>
-                        <p class="text-2xl md:text-3xl font-bold text-white relative z-10 px-8 py-2 drop-shadow-md">3 funis validados<br/>de alta conversão</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 max-w-7xl mx-auto">
-                    <div class="bg-[#0a1812] rounded-2xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-blue-500">
-                        <div class="bg-blue-900/30 text-blue-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-blue-800/50">Topo de Funil</div>
-                        <h5 class="text-xl font-bold text-white mb-2">1. Vídeo Institucional</h5>
-                        <p class="text-slate-400 text-sm mb-6 flex-1">Vídeo de alto valor focando na autoridade do G30. Roda continuamente para atrair público novo para a base.</p>
-                    </div>
-                    <div class="bg-[#0a1812] rounded-2xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-purple-500">
-                        <div class="bg-purple-900/30 text-purple-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-purple-800/50">Meio de Funil</div>
-                        <h5 class="text-xl font-bold text-white mb-2">2. Prova Social</h5>
-                        <p class="text-slate-400 text-sm mb-6 flex-1">Depoimentos reais e entregas de chaves. Gera confiança instantânea e quebra as principais objeções do cliente.</p>
-                    </div>
-                    <div class="bg-[#0a1812] rounded-2xl shadow-lg border border-[#1a382a] p-6 flex flex-col h-full border-t-4 border-t-orange-500">
-                        <div class="bg-orange-900/30 text-orange-400 w-max px-3 py-1 rounded text-xs font-black mb-4 uppercase tracking-wider border border-orange-800/50">Fundo de Funil</div>
-                        <h5 class="text-xl font-bold text-white mb-2">3. Oferta Única (Vendas)</h5>
-                        <p class="text-slate-400 text-sm mb-6 flex-1">Gatilhos de escassez e urgência para conversão imediata para quem já conhece a marca.</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- Roteiros -->
             <section id="informativo" class="space-y-8 pt-24 -mt-24">
                 <div class="border-b border-[#1a382a] pb-4 mb-8">
@@ -190,9 +166,115 @@
             </section>
         </div>
 
+        <!-- ========================================== -->
+        <!-- TAB 2: CALENDÁRIO (TIMELINE VISUAL)        -->
+        <!-- ========================================== -->
+        <div id="tab-calendario" class="tab-content space-y-16">
+            
+            <section class="text-center max-w-4xl mx-auto py-6">
+                <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter drop-shadow-lg leading-tight">
+                    Cronograma <span class="text-orange-500">Oficial</span>
+                </h2>
+                <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
+                    O mapa do tempo exato para preparar, lançar e vender. Cumpra os prazos rigorosamente para garantir a tração máxima do Feirão.
+                </p>
+            </section>
+
+            <!-- Calendário Timeline (Fluxograma Estilo Lions) -->
+            <section class="max-w-6xl mx-auto">
+                <div class="bg-[#0a1812] border border-[#1a382a] rounded-3xl p-8 md:p-14 shadow-2xl relative overflow-hidden">
+                    <!-- Glows -->
+                    <div class="absolute -top-32 -left-32 w-96 h-96 bg-orange-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+                    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+                    
+                    <div class="relative z-10 flex flex-col gap-6 md:gap-10">
+                        
+                        <!-- Linha conectora desktop -->
+                        <div class="hidden md:block absolute left-[86px] top-10 bottom-10 w-1 bg-[#1a382a] z-0"></div>
+
+                        <!-- BLOCO 1: Gravação -->
+                        <div class="flex flex-col md:flex-row gap-6 items-start relative z-10 group">
+                            <div class="bg-[#050b08] border-4 border-[#1a382a] group-hover:border-orange-500 rounded-2xl w-full md:w-44 h-auto md:h-24 flex flex-col items-center justify-center shrink-0 shadow-lg z-10 transition duration-300 py-4 md:py-0">
+                                <span class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Mão na Massa</span>
+                                <span class="text-orange-400 font-black text-xl leading-none">03 a 06/Mar</span>
+                            </div>
+                            <div class="bg-[#133325] border border-[#1a382a] flex-1 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-l-blue-500 transform transition duration-300 group-hover:scale-[1.01] w-full">
+                                <h4 class="text-2xl font-black text-white uppercase tracking-wide mb-3">Produção de Criativos</h4>
+                                <p class="text-slate-300 text-lg leading-relaxed">
+                                    É o momento de ir para o pátio. Grave todos os <strong class="text-white">vídeos institucionais, de urgência e provas sociais</strong> com antecedência. Siga os scripts da aba "O Feirão". 
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BLOCO 2: Subir Ads -->
+                        <div class="flex flex-col md:flex-row gap-6 items-start relative z-10 group">
+                            <div class="bg-[#050b08] border-4 border-[#1a382a] group-hover:border-orange-500 rounded-2xl w-full md:w-44 h-auto md:h-24 flex flex-col items-center justify-center shrink-0 shadow-lg z-10 transition duration-300 py-4 md:py-0">
+                                <span class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Ativação</span>
+                                <span class="text-orange-400 font-black text-xl leading-none">10 a 15/Mar</span>
+                            </div>
+                            <div class="bg-[#133325] border border-[#1a382a] flex-1 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-l-purple-500 transform transition duration-300 group-hover:scale-[1.01] w-full">
+                                <h4 class="text-2xl font-black text-white uppercase tracking-wide mb-3">Lançamento nas Plataformas</h4>
+                                <p class="text-slate-300 text-lg leading-relaxed">
+                                    Ação do tráfego pago. <strong class="text-white">Suba todos os criativos gravados</strong> no Meta/Google Ads. Inicie a captação massiva de leads para encher a Central e preparar o Carchat.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BLOCO 3: LIVE -->
+                        <div class="flex flex-col md:flex-row gap-6 items-start relative z-10 group">
+                            <div class="bg-gradient-to-br from-orange-600 to-orange-800 border-4 border-[#0a1812] rounded-2xl w-full md:w-44 h-auto md:h-24 flex flex-col items-center justify-center shrink-0 shadow-[0_0_20px_rgba(234,88,12,0.4)] z-10 py-4 md:py-0 transform group-hover:scale-105 transition duration-300">
+                                <span class="text-orange-200 text-xs font-black uppercase tracking-widest mb-1">Abertura</span>
+                                <span class="text-white font-black text-2xl leading-none">25/Mar</span>
+                            </div>
+                            <div class="bg-[#ea580c] border border-orange-500 flex-1 rounded-2xl p-6 md:p-8 shadow-xl transform transition duration-300 group-hover:scale-[1.01] w-full relative overflow-hidden">
+                                <div class="absolute right-0 top-0 text-orange-400/30 text-8xl opacity-50 -mt-4 -mr-4 pointer-events-none">🎙️</div>
+                                <div class="flex items-center gap-3 mb-3 relative z-10">
+                                    <span class="bg-white text-orange-600 text-xs font-black px-3 py-1 rounded uppercase shadow-sm">19h30</span>
+                                    <h4 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter">Live Mega Feirão</h4>
+                                </div>
+                                <p class="text-orange-50 text-lg font-medium relative z-10">
+                                    O grande aquecimento e revelação de ofertas! Abertura oficial das condições para a base que foi aquecida nas semanas anteriores.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BLOCO 4: FEIRÃO -->
+                        <div class="flex flex-col md:flex-row gap-6 items-start relative z-10 group">
+                            <div class="bg-[#3b0a0a] border-4 border-red-900 group-hover:border-red-600 rounded-2xl w-full md:w-44 h-auto md:h-24 flex flex-col items-center justify-center shrink-0 shadow-lg z-10 transition duration-300 py-4 md:py-0">
+                                <span class="text-red-300 text-xs font-black uppercase tracking-widest mb-1">O Desafio</span>
+                                <span class="text-red-500 font-black text-xl leading-none text-center">26 a 28/Mar</span>
+                            </div>
+                            <div class="flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <!-- Dia 1 -->
+                                <div class="bg-[#1a0f0f] border border-red-500/30 rounded-2xl p-6 text-center shadow-lg transform transition duration-300 hover:-translate-y-2 hover:border-red-500">
+                                    <h5 class="text-red-500 font-black text-4xl mb-1">26</h5>
+                                    <span class="text-white font-black uppercase tracking-widest text-xs block mb-3 bg-red-900/30 py-1 rounded">Quinta-feira</span>
+                                    <p class="text-sm text-slate-300 font-medium">Evento Dia 1. Receber agendamentos e soltar vídeos de urgência ("Acabou de começar!").</p>
+                                </div>
+                                <!-- Dia 2 -->
+                                <div class="bg-[#1a0f0f] border border-red-500/30 rounded-2xl p-6 text-center shadow-lg transform transition duration-300 hover:-translate-y-2 hover:border-red-500">
+                                    <h5 class="text-red-500 font-black text-4xl mb-1">27</h5>
+                                    <span class="text-white font-black uppercase tracking-widest text-xs block mb-3 bg-red-900/30 py-1 rounded">Sexta-feira</span>
+                                    <p class="text-sm text-slate-300 font-medium">Evento Dia 2. Gravação de entregas reais, loja lotada e foco em novas aprovações.</p>
+                                </div>
+                                <!-- Dia 3 -->
+                                <div class="bg-[#1a0f0f] border border-red-500/30 rounded-2xl p-6 text-center shadow-lg transform transition duration-300 hover:-translate-y-2 hover:border-red-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 border-4 border-red-600/20 rounded-2xl pointer-events-none"></div>
+                                    <h5 class="text-red-500 font-black text-4xl mb-1">28</h5>
+                                    <span class="text-white font-black uppercase tracking-widest text-xs block mb-3 bg-red-600 py-1 rounded">Sábado (Fim)</span>
+                                    <p class="text-sm text-slate-300 font-medium">Última chance. Remarketing extremamente agressivo focando em "O Feirão acaba Hoje!".</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
         <!-- ========================================== -->
-        <!-- TAB 2: PRÉ-VENDAS E ACOMPANHAMENTO         -->
+        <!-- TAB 3: PRÉ-VENDAS E ACOMPANHAMENTO         -->
         <!-- ========================================== -->
         <div id="tab-presales" class="tab-content space-y-20">
             <section class="text-center max-w-4xl mx-auto py-6">
@@ -283,7 +365,7 @@
 
 
         <!-- ========================================== -->
-        <!-- TAB 3: TRÁFEGO PAGO E CALENDÁRIO           -->
+        <!-- TAB 4: TRÁFEGO PAGO E FUNIS                -->
         <!-- ========================================== -->
         <div id="tab-trafego" class="tab-content space-y-20">
             
@@ -296,14 +378,14 @@
                 </p>
             </section>
 
-            <!-- Calendário Timeline (Tabela Estruturada) -->
+            <!-- Tabela Estruturada -->
             <section class="max-w-6xl mx-auto">
                 <div class="bg-[#050b08] border border-[#1a382a] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                     <div class="absolute -top-24 -left-24 w-64 h-64 bg-orange-600/10 blur-[80px] rounded-full pointer-events-none"></div>
                     
                     <div class="text-center mb-12 relative z-10">
-                        <span class="bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-4 shadow-lg">Planejamento Estratégico</span>
-                        <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter">O Caminho até o <span class="text-orange-500">Desafio</span></h3>
+                        <span class="bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-4 shadow-lg">Detalhes de Campanha</span>
+                        <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter">Conteúdos por <span class="text-orange-500">Fase</span></h3>
                         <p class="text-slate-400 mt-3 text-sm md:text-base max-w-2xl mx-auto">Mapeamento exato das campanhas desde o aquecimento até aos dias do evento, englobando as fases vitais para alta conversão.</p>
                     </div>
 
@@ -319,7 +401,6 @@
                             </thead>
                             <tbody class="divide-y divide-[#1a382a] text-sm text-slate-300">
                                 
-                                <!-- Fase 1: Aquecimento -->
                                 <tr class="hover:bg-[#0a1812] transition duration-200">
                                     <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
                                         <div class="text-xl">10 a 19/Mar</div>
@@ -339,7 +420,6 @@
                                     </td>
                                 </tr>
 
-                                <!-- Fase 2: Agenda / Pré-Live -->
                                 <tr class="hover:bg-[#0a1812] transition duration-200">
                                     <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
                                         <div class="text-xl">20 a 24/Mar</div>
@@ -359,7 +439,6 @@
                                     </td>
                                 </tr>
 
-                                <!-- Fase 3: Abertura (Esquenta) -->
                                 <tr class="hover:bg-[#0a1812] transition duration-200 bg-[#133325]/40">
                                     <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
                                         <div class="text-2xl text-orange-500">25/Março</div>
@@ -376,7 +455,6 @@
                                     </td>
                                 </tr>
 
-                                <!-- Fase 4: Realização -->
                                 <tr class="hover:bg-[#0a1812] transition duration-200 border-l-4 border-red-500">
                                     <td class="px-6 py-6 font-bold text-white whitespace-nowrap">
                                         <div class="text-2xl text-red-500">26 a 28/Mar</div>
@@ -392,7 +470,7 @@
                                         </ul>
                                     </td>
                                     <td class="px-6 py-6 leading-relaxed">
-                                        Soltar as chamadas específicas (qualidades e perfis). Usar vídeos prontos que mencionem <strong class="text-white">"hoje", "agora", "no momento"</strong>. Gravar muito conteúdo "cru" mostrando a estrutura, o movimento e <strong class="text-white">prova social real</strong> (chaves entregues).
+                                        Soltar as chamadas específicas. Usar vídeos prontos que mencionem <strong class="text-white">"hoje", "agora", "no momento"</strong>. Gravar muito conteúdo "cru" mostrando a estrutura, o movimento e <strong class="text-white">prova social real</strong> (chaves entregues).
                                     </td>
                                 </tr>
 
@@ -471,6 +549,124 @@
                 </div>
 
             </section>
+
+             <!-- Como Vamos Vender / Funis Resumo (Movido do tab main) -->
+            <section class="space-y-8 max-w-6xl mx-auto pb-12 mt-12">
+                <div class="bg-[#ea580c] rounded-3xl p-10 md:p-14 text-center mb-12 relative overflow-hidden shadow-[0_0_40px_rgba(234,88,12,0.2)] border border-orange-500">
+                    <div class="absolute top-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-orange-300/60 text-3xl">✦</div>
+                    <h3 class="text-5xl md:text-7xl font-black text-[#111827] uppercase tracking-tighter leading-[0.9] mb-10 drop-shadow-sm">Como<br/>Vamos<br/>Vender?</h3>
+                    <div class="inline-block relative">
+                        <div class="absolute inset-0 border-[3px] border-white/70 rounded-[100%] -rotate-2 scale-x-110 scale-y-[1.3] pointer-events-none"></div>
+                        <p class="text-2xl md:text-3xl font-bold text-white relative z-10 px-8 py-2 drop-shadow-md">3 funis validados<br/>de alta conversão</p>
+                    </div>
+                </div>
+
+                <!-- Fluxograma Funil 1 -->
+                <div class="mb-16 relative">
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] -rotate-1 scale-x-110 scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">1- A Força do <span class="text-orange-500">Tráfego Pago</span></h3>
+                    </div>
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-24 -left-24 w-64 h-64 bg-orange-600/5 blur-[80px] rounded-full pointer-events-none"></div>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12 relative z-10">
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">ADS</div>
+                            <div class="text-orange-500 text-4xl rotate-90 md:rotate-0">➔</div>
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">CARCHAT</div>
+                            <div class="text-orange-500 text-4xl rotate-90 md:rotate-0">➔</div>
+                            <div class="bg-orange-600 w-full md:w-auto text-white font-black text-xl uppercase py-5 px-10 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 relative">FORMS</div>
+                        </div>
+                        <div class="relative max-w-5xl mx-auto">
+                            <div class="hidden md:block absolute -top-12 left-[78%] w-0.5 h-12 bg-orange-500/40"></div> 
+                            <div class="hidden md:block absolute top-0 left-[25%] right-[22%] h-0.5 bg-orange-500/40"></div> 
+                            <div class="hidden md:block absolute top-0 left-[25%] w-0.5 h-8 bg-orange-500/40"></div> 
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10 pt-8 md:pt-0">
+                                <div class="md:col-span-5 flex flex-col gap-3 relative">
+                                     <div class="hidden md:block absolute -top-8 left-1/2 -translate-x-1/2 text-orange-500/40">▼</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Troca</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Parcela</div>
+                                    <div class="bg-[#133325] border border-orange-500/30 text-orange-300 font-bold uppercase text-center py-4 rounded-lg shadow-sm tracking-wide">Carro Desejado</div>
+                                </div>
+                                <div class="md:col-span-2 flex justify-center text-orange-500 text-6xl rotate-90 md:rotate-0">➝</div>
+                                <div class="md:col-span-5">
+                                     <div class="bg-gradient-to-br from-[#0a1812] to-orange-950 border-2 border-orange-500 text-white font-black uppercase text-center py-12 rounded-2xl shadow-[0_0_30px_rgba(234,88,12,0.3)] text-3xl leading-tight tracking-tighter transform transition hover:scale-105">Central<br/>de Leads</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center text-slate-400 text-lg mt-12 font-medium tracking-wide uppercase relative z-10">Captura massiva e qualificação via IA</p>
+                    </div>
+                </div>
+
+                <!-- Fluxograma Funil 2 -->
+                <div class="mb-16 relative">
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] rotate-2 scale-x-[1.15] scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">2- Abertura e <span class="text-orange-500">Engajamento</span></h3>
+                    </div>
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-orange-600/5 blur-[80px] rounded-full pointer-events-none"></div>
+                        <div class="text-center mb-12 relative z-10">
+                            <h4 class="text-slate-400 font-medium tracking-widest uppercase text-sm mb-1">Abertura via Live</h4>
+                            <p class="text-white font-black text-2xl tracking-wide uppercase">Dia 25/Mar às 19H30</p>
+                        </div>
+                        <div class="relative z-10 max-w-4xl mx-auto">
+                            <div class="hidden md:grid grid-cols-[200px_auto_200px_auto_200px] gap-x-4 gap-y-2 justify-center items-center">
+                                <div class="bg-orange-600 w-full text-white font-black text-xl uppercase py-5 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105">LIVE</div>
+                                <div class="text-orange-500 text-4xl text-center">➔</div>
+                                <div class="bg-orange-600 w-full text-white font-black text-lg uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">Carchat<br><span class="text-xs font-bold text-orange-200">IA no Direct</span></div>
+                                <div></div><div></div><div></div><div></div>
+                                <div class="text-orange-500 text-4xl text-center py-2">⬇</div>
+                                <div></div><div></div><div></div><div></div>
+                                <div class="bg-orange-600 w-full text-white font-black text-lg uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">Ligação<br><span class="text-xs font-bold text-orange-200">Por Telefone</span></div>
+                                <div class="text-orange-500 text-4xl text-center">➔</div>
+                                <div class="bg-orange-600 w-full text-white font-black text-xl uppercase py-4 px-4 rounded-xl shadow-lg tracking-wider text-center transform transition hover:scale-105 leading-tight">Sinal<br><span class="text-2xl font-black">PIX $</span></div>
+                            </div>
+                            <div class="md:hidden flex flex-col items-center gap-4">
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-xl uppercase py-5 px-6 rounded-xl shadow-lg tracking-wider text-center">LIVE</div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-lg uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Carchat<br><span class="text-sm font-bold text-orange-200">IA no Direct</span></div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-lg uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Ligação<br><span class="text-sm font-bold text-orange-200">Por Telefone</span></div>
+                                <div class="text-orange-500 text-4xl rotate-90">➔</div>
+                                <div class="bg-orange-600 w-full max-w-xs text-white font-black text-xl uppercase py-4 px-6 rounded-xl shadow-lg tracking-wider text-center leading-tight">Sinal<br><span class="text-2xl font-black">PIX $</span></div>
+                            </div>
+                        </div>
+                        <p class="text-center text-slate-400 text-lg mt-14 font-medium tracking-wide uppercase relative z-10">Aquecimento da base e oferta ao vivo.</p>
+                    </div>
+                </div>
+
+                <!-- Fluxograma Funil 3 -->
+                <div class="mb-16 relative">
+                    <div class="text-center mb-12 relative inline-block left-1/2 -translate-x-1/2">
+                         <div class="absolute inset-0 border-[3px] border-orange-500 rounded-[100%] rotate-[-2deg] scale-x-[1.15] scale-y-[1.4] pointer-events-none opacity-80"></div>
+                         <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tight relative z-10 px-8 py-2">3- O Poder da <span class="text-orange-500">Nossa Parceria</span></h3>
+                    </div>
+                    <div class="bg-[#0a1812] border border-orange-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-600/5 blur-[100px] rounded-full pointer-events-none"></div>
+                        <div class="text-center mb-12 relative z-10">
+                            <h4 class="text-slate-400 font-medium tracking-widest uppercase text-sm mb-1">Funil de Vendas</h4>
+                            <p class="text-white font-black text-2xl tracking-wide uppercase">Com o C6 Auto</p>
+                        </div>
+                        <div class="relative z-10 max-w-md mx-auto flex flex-col items-center gap-3">
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider mb-1">Lista Leads</div>
+                                <div class="text-orange-300 text-sm font-bold uppercase tracking-wide">Pré Aprovados no Banco</div>
+                            </div>
+                            <div class="text-orange-500 text-4xl">⬇</div>
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider">IA Carchat</div>
+                            </div>
+                            <div class="text-orange-500 text-4xl">⬇</div>
+                            <div class="bg-[#133325] border-2 border-orange-500/50 w-full text-center py-6 px-4 rounded-xl shadow-lg transform transition hover:scale-105">
+                                <div class="text-white font-black text-xl uppercase tracking-wider mb-1">Agendamento</div>
+                                <div class="text-orange-300 text-sm font-bold uppercase tracking-wide">Visita na Loja</div>
+                            </div>
+                        </div>
+                        <p class="text-center text-slate-400 text-lg mt-14 font-medium tracking-wide uppercase relative z-10">Lista de leads pré-aprovados e agendamento direto pela CarChat.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </main>
@@ -501,7 +697,6 @@
     <script>
         // --- DATA STORE: ROTEIROS DE CARROS ---
         const scriptsData = [
-            // O Mega Feirão G30 está no GANCHO nestes primeiros 7 roteiros:
             {
                 id: 1,
                 model: "Chevrolet Onix",
@@ -593,8 +788,6 @@
                 body: "Essa é a Fiat Strada, a líder absoluta de vendas! Caçamba espaçosa para o seu trabalho, conforto de carro de passeio para o seu fim de semana e a revenda mais rápida do mercado.",
                 cta: "Você encontrou a sua ferramenta de trabalho. Clica no botão aqui embaixo, fala com nossos consultores e vem buscar a sua no Mega Feirão G30 antes que seu concorrente compre."
             },
-
-            // Nestes roteiros (8 a 14) o foco do Mega Feirão G30 vai direto e apenas para a Chamada (CTA):
             {
                 id: 8,
                 model: "Chevrolet Tracker",
@@ -722,9 +915,14 @@
             });
 
             // Reset Desktop Nav Colors
-            document.getElementById('nav-feirao').className = "nav-btn text-slate-400 hover:text-orange-400 px-3 py-2 text-sm font-bold uppercase tracking-wider transition";
-            document.getElementById('nav-trafego').className = "nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2";
-            document.getElementById('nav-prevendas').className = "nav-btn text-slate-400 hover:text-orange-400 bg-[#133325] border border-[#1a382a] px-5 py-2.5 rounded-md text-sm font-bold uppercase tracking-wide transition shadow-lg flex items-center gap-2";
+            const baseClass = "nav-btn text-slate-400 hover:text-orange-400 px-3 py-2 text-sm font-bold uppercase tracking-wider transition";
+            const borderedClass = "nav-btn text-slate-400 hover:text-orange-400 bg-transparent border border-transparent px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition flex items-center gap-2";
+            const filledClass = "nav-btn text-slate-400 hover:text-orange-400 bg-[#133325] border border-[#1a382a] px-4 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition shadow-lg flex items-center gap-2";
+
+            document.getElementById('nav-feirao').className = baseClass;
+            document.getElementById('nav-calendario').className = borderedClass;
+            document.getElementById('nav-trafego').className = borderedClass;
+            document.getElementById('nav-prevendas').className = filledClass;
             
             // Sub-nav for main tab
             document.querySelectorAll('.nav-sub').forEach(el => { el.style.display = 'none'; });
@@ -736,6 +934,12 @@
                 document.getElementById('nav-feirao').classList.replace('text-slate-400', 'text-orange-500');
                 document.querySelectorAll('.nav-sub').forEach(el => { el.style.display = 'inline-block'; });
             } 
+            else if (tabId === 'calendario') {
+                document.getElementById('tab-calendario').style.display = 'block';
+                setTimeout(() => document.getElementById('tab-calendario').classList.add('active'), 50);
+                document.getElementById('nav-calendario').classList.replace('text-slate-400', 'text-orange-500');
+                document.getElementById('nav-calendario').classList.add('border-orange-500');
+            }
             else if (tabId === 'trafego') {
                 document.getElementById('tab-trafego').style.display = 'block';
                 setTimeout(() => document.getElementById('tab-trafego').classList.add('active'), 50);
@@ -755,8 +959,9 @@
                 btn.className = "bg-[#133325] text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase border border-[#1a382a] shrink-0";
             });
             if(tabId === 'main') mobileBtns[0].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
-            if(tabId === 'trafego') mobileBtns[1].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
-            if(tabId === 'presales') mobileBtns[2].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
+            if(tabId === 'calendario') mobileBtns[1].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
+            if(tabId === 'trafego') mobileBtns[2].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
+            if(tabId === 'presales') mobileBtns[3].className = "bg-orange-600 text-white px-3 py-2 rounded-md text-[10px] font-bold uppercase shrink-0";
         }
 
         function goToSection(sectionId) {
